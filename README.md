@@ -1,69 +1,45 @@
-# The Future of Terraform CDK
+# CDK Terrain Go
 
-## Sunset Notice
+CDK Terrain (CDKTN) is a community fork of the Cloud Development Kit for Terraform (CDKTF).
+CDKTN allows you to use familiar programming languages to define cloud infrastructure
+and provision it through HashiCorp Terraform or OpenTofu. This gives you access to the
+entire Terraform/OpenTofu ecosystem without learning HashiCorp Configuration Language (HCL)
+and lets you leverage the power of your existing toolchain for testing, dependency management, etc.
 
-Terraform CDK (CDKTF) will sunset and be archived on December 10, 2025. HashiCorp, an IBM Company, will no longer maintain or develop the project after that date. Unfortunately, Terraform CDK did not find product-market fit at scale. HashiCorp, an IBM Company, has chosen to focus its investments on Terraform core and its broader ecosystem.
+This repository contains the Go bindings for CDK Terrain.
 
-As of December 10, 2025, Terraform CDK will be archived on GitHub, and the documentation will reflect its deprecated status. The archived code will remain available on GitHub, but it will be read-only. No further updates, fixes, or improvements (including compatibility updates) will be made.
+## Installation
 
-You will be able to continue to use Terraform CDK at your own risk. Terraform CDK is licensed under the Mozilla Public License (MPL). HashiCorp, an IBM Company, does not apply any additional restrictions. We encourage community forks if there’s interest in continuing development independently.
+```bash
+go get github.com/open-constructs/cdk-terrain-go/cdktn
+```
 
-## Migration to HCL
+## Usage
 
-You can use the following command to generate Terraform-compatible .tf files directly from your Terraform CDK project:
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+```
 
-`cdktf synth --hcl`
+## Documentation
 
-This will produce readable HCL configuration files, making it easier to migrate away from Terraform CDK. After running the command, you can use standard Terraform CLI commands (`terraform init`, `terraform plan`, `terraform apply`) to continue managing your infrastructure. Please note that while this helps bootstrap your configuration, you may still need to review and adjust the generated files for clarity, organization, or best practices.
+Refer to the [CDKTN documentation](https://cdktn.io/docs) for more detail about how to build and manage CDKTN applications, including:
 
-### Note on AWS CDK
+- [Application Architecture](https://cdktn.io/docs/concepts/cdktn-architecture): Learn the tools and processes that CDKTN uses to leverage the Terraform ecosystem and convert code into Terraform configuration files.
 
-If your infrastructure is defined in Terraform CDK but also tightly integrated with AWS CDK, you may find it more consistent to migrate directly to the AWS CDK ecosystem. If you are not using AWS CDK, we highly recommend migrating to standard Terraform and HCL for long-term support and ecosystem alignment.
+- [Project Setup](https://cdktn.io/docs/create-and-deploy/project-setup): Learn how to create a new CDKTN project from a pre-built or custom template.
 
-## FAQ
+- [Examples](https://cdktn.io/docs/examples-and-guides/examples): Reference example projects in every supported language.
 
-Q: Is CDKTF still being developed?
+## Community
 
-A: No. CDKTF will sunset and be archived on December 10, 2025. HashiCorp, an IBM Company, will no longer maintain or develop the project after that date.
+- Ask a question on the [cdk.dev - #cdk-terrain channel](https://cdk.dev).
+- Report a [bug](https://github.com/open-constructs/cdk-terrain/issues/new?assignees=&labels=bug&template=bug-report.md&title=) or request a new [feature](https://github.com/open-constructs/cdk-terrain/issues/new?assignees=&labels=enhancement&template=feature-request.md&title=).
+- Browse all [open issues](https://github.com/open-constructs/cdk-terrain/issues).
 
-Q: Why is CDKTF being sunset?
+## Source
 
-A: CDKTF did not find product-market fit at scale. We’ve chosen to focus our investments on Terraform core and its broader ecosystem.
+This module is generated from [open-constructs/cdk-terrain](https://github.com/open-constructs/cdk-terrain).
 
-Q: Will CDKTF be removed from GitHub?
+## License
 
-A: CDKTF will be archived on GitHub, and documentation will reflect its deprecated status.
-
-Q: Can I still use CDKTF after it's sunset?
-
-A: Yes, the archived code will remain available on GitHub, but it will be read-only. No further updates, fixes, or improvements will be made.
-
-Q: Will CDKTF continue to support new versions of Terraform or providers?
-
-A: No. Compatibility updates will not be made after the EOL date.
-
-Q: Can I fork CDKTF and maintain it myself?
-
-A: Yes. CDKTF is open source, and we encourage community forks if there’s interest in continuing development independently.
-
-Q: Can I keep using CDKTF?
-
-A: You may continue to use it at your own risk. HashiCorp, an IBM Company, will no longer be maintaining it.
-
-Q: Is there a migration tool?
-
-A: You can use the following command to generate Terraform-compatible .tf files directly from your CDKTF project:
-
-`cdktf synth --hcl`
-
-This will produce readable HCL configuration files, making it easier to migrate away from CDKTF. After running the command, you can use standard Terraform CLI commands (terraform init, terraform plan, terraform apply) to continue managing your infrastructure. Please note that while this helps bootstrap your configuration, you may still need to review and adjust the generated files for clarity, organization, or best practices.
-
-Q: What migration guidance can we provide to customers?
-
-A: For users looking to migrate away from CDKTF:
-
-If your infrastructure is defined in CDKTF but also tightly integrated with AWS CDK, you may find it more consistent to migrate directly to the AWS CDK ecosystem.
-
-If you are not using AWS CDK, we highly recommend migrating to standard Terraform and HCL for long-term support and ecosystem alignment.
-
----
+This project is licensed under the [MPL-2.0](./LICENSE).
