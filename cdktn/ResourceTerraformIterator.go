@@ -15,7 +15,7 @@ type ResourceTerraformIterator interface {
 	//
 	// For lists this is the same as `iterator.value`. If you need the index,
 	// use count via `TerraformCount`:
-	// https://developer.hashicorp.com/terraform/cdktf/concepts/iterators#using-count
+	// https://cdktn.io/docs/concepts/iterators#using-count
 	// Experimental.
 	Key() interface{}
 	// Returns the value of the current item iterated over.
@@ -25,7 +25,7 @@ type ResourceTerraformIterator interface {
 	//
 	// As this returns an IResolvable you might need to wrap the output in
 	// a Token, e.g. `Token.asString`.
-	// See https://developer.hashicorp.com/terraform/cdktf/concepts/iterators#using-iterators-for-list-attributes
+	// See https://cdktn.io/docs/concepts/iterators#using-iterators-for-list-attributes
 	// Experimental.
 	Dynamic(attributes *map[string]interface{}) IResolvable
 	// Creates a for expression that results in a list.

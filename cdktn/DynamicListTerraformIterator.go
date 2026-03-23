@@ -21,7 +21,7 @@ type DynamicListTerraformIterator interface {
 	//
 	// As this returns an IResolvable you might need to wrap the output in
 	// a Token, e.g. `Token.asString`.
-	// See https://developer.hashicorp.com/terraform/cdktf/concepts/iterators#using-iterators-for-list-attributes
+	// See https://cdktn.io/docs/concepts/iterators#using-iterators-for-list-attributes
 	// Experimental.
 	Dynamic(attributes *map[string]interface{}) IResolvable
 	// Creates a for expression that results in a list.
