@@ -20,4 +20,4 @@ Build the package
 yarn build
 ```
 
-[Learn More](https://cdktn.io/docs)
+[Learn More](https://cdk.tf/docs)
