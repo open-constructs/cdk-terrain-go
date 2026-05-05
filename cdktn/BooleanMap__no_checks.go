@@ -11,7 +11,7 @@ func (b *jsiiProxy_BooleanMap) validateLookupParameters(key *string) error {
 	return nil
 }
 
-func (b *jsiiProxy_BooleanMap) validateResolveParameters(_context IResolveContext) error {
+func (b *jsiiProxy_BooleanMap) validateResolveParameters(context IResolveContext) error {
 	return nil
 }
 

@@ -25,9 +25,9 @@ func (a *jsiiProxy_AnyListList) validateGetParameters(index *float64) error {
 	return nil
 }
 
-func (a *jsiiProxy_AnyListList) validateResolveParameters(_context IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (a *jsiiProxy_AnyListList) validateResolveParameters(context IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

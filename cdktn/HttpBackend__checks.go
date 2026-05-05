@@ -25,7 +25,7 @@ func (h *jsiiProxy_HttpBackend) validateAddOverrideParameters(path *string, valu
 	return nil
 }
 
-func (h *jsiiProxy_HttpBackend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, _fromStack *string) error {
+func (h *jsiiProxy_HttpBackend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, fromStack *string) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
 	}
@@ -34,8 +34,8 @@ func (h *jsiiProxy_HttpBackend) validateGetRemoteStateDataSourceParameters(scope
 		return fmt.Errorf("parameter name is required, but nil was provided")
 	}
 
-	if _fromStack == nil {
-		return fmt.Errorf("parameter _fromStack is required, but nil was provided")
+	if fromStack == nil {
+		return fmt.Errorf("parameter fromStack is required, but nil was provided")
 	}
 
 	return nil

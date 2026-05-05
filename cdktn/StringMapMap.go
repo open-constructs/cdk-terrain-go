@@ -9,7 +9,7 @@ import (
 )
 
 // Experimental.
-type ComplexMap interface {
+type StringMapMap interface {
 	IResolvable
 	ITerraformAddressable
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
@@ -30,7 +30,7 @@ type ComplexMap interface {
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
-	InterpolationForAttribute(property *string) IResolvable
+	Lookup(key *string) StringMap
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(context IResolveContext) interface{}
@@ -41,13 +41,13 @@ type ComplexMap interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for ComplexMap
-type jsiiProxy_ComplexMap struct {
+// The jsii proxy struct for StringMapMap
+type jsiiProxy_StringMapMap struct {
 	jsiiProxy_IResolvable
 	jsiiProxy_ITerraformAddressable
 }
 
-func (j *jsiiProxy_ComplexMap) CreationStack() *[]*string {
+func (j *jsiiProxy_StringMapMap) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -57,7 +57,7 @@ func (j *jsiiProxy_ComplexMap) CreationStack() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_ComplexMap) Fqn() *string {
+func (j *jsiiProxy_StringMapMap) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -67,7 +67,7 @@ func (j *jsiiProxy_ComplexMap) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_ComplexMap) TerraformAttribute() *string {
+func (j *jsiiProxy_StringMapMap) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -77,7 +77,7 @@ func (j *jsiiProxy_ComplexMap) TerraformAttribute() *string {
 	return returns
 }
 
-func (j *jsiiProxy_ComplexMap) TerraformResource() IInterpolatingParent {
+func (j *jsiiProxy_StringMapMap) TerraformResource() IInterpolatingParent {
 	var returns IInterpolatingParent
 	_jsii_.Get(
 		j,
@@ -89,17 +89,35 @@ func (j *jsiiProxy_ComplexMap) TerraformResource() IInterpolatingParent {
 
 
 // Experimental.
-func NewComplexMap_Override(c ComplexMap, terraformResource IInterpolatingParent, terraformAttribute *string) {
+func NewStringMapMap(terraformResource IInterpolatingParent, terraformAttribute *string) StringMapMap {
+	_init_.Initialize()
+
+	if err := validateNewStringMapMapParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
+	j := jsiiProxy_StringMapMap{}
+
+	_jsii_.Create(
+		"cdktn.StringMapMap",
+		[]interface{}{terraformResource, terraformAttribute},
+		&j,
+	)
+
+	return &j
+}
+
+// Experimental.
+func NewStringMapMap_Override(s StringMapMap, terraformResource IInterpolatingParent, terraformAttribute *string) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"cdktn.ComplexMap",
+		"cdktn.StringMapMap",
 		[]interface{}{terraformResource, terraformAttribute},
-		c,
+		s,
 	)
 }
 
-func (j *jsiiProxy_ComplexMap)SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_StringMapMap)SetTerraformAttribute(val *string) {
 	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
 		panic(err)
 	}
@@ -110,7 +128,7 @@ func (j *jsiiProxy_ComplexMap)SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ComplexMap)SetTerraformResource(val IInterpolatingParent) {
+func (j *jsiiProxy_StringMapMap)SetTerraformResource(val IInterpolatingParent) {
 	if err := j.validateSetTerraformResourceParameters(val); err != nil {
 		panic(err)
 	}
@@ -121,11 +139,11 @@ func (j *jsiiProxy_ComplexMap)SetTerraformResource(val IInterpolatingParent) {
 	)
 }
 
-func (c *jsiiProxy_ComplexMap) ComputeFqn() *string {
+func (s *jsiiProxy_StringMapMap) ComputeFqn() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		c,
+		s,
 		"computeFqn",
 		nil, // no parameters
 		&returns,
@@ -134,30 +152,30 @@ func (c *jsiiProxy_ComplexMap) ComputeFqn() *string {
 	return returns
 }
 
-func (c *jsiiProxy_ComplexMap) InterpolationForAttribute(property *string) IResolvable {
-	if err := c.validateInterpolationForAttributeParameters(property); err != nil {
+func (s *jsiiProxy_StringMapMap) Lookup(key *string) StringMap {
+	if err := s.validateLookupParameters(key); err != nil {
 		panic(err)
 	}
-	var returns IResolvable
+	var returns StringMap
 
 	_jsii_.Invoke(
-		c,
-		"interpolationForAttribute",
-		[]interface{}{property},
+		s,
+		"lookup",
+		[]interface{}{key},
 		&returns,
 	)
 
 	return returns
 }
 
-func (c *jsiiProxy_ComplexMap) Resolve(context IResolveContext) interface{} {
-	if err := c.validateResolveParameters(context); err != nil {
+func (s *jsiiProxy_StringMapMap) Resolve(context IResolveContext) interface{} {
+	if err := s.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
 
 	_jsii_.Invoke(
-		c,
+		s,
 		"resolve",
 		[]interface{}{context},
 		&returns,
@@ -166,11 +184,11 @@ func (c *jsiiProxy_ComplexMap) Resolve(context IResolveContext) interface{} {
 	return returns
 }
 
-func (c *jsiiProxy_ComplexMap) ToString() *string {
+func (s *jsiiProxy_StringMapMap) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		c,
+		s,
 		"toString",
 		nil, // no parameters
 		&returns,

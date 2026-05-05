@@ -25,9 +25,9 @@ func (n *jsiiProxy_NumberListMap) validateInterpolationForAttributeParameters(pr
 	return nil
 }
 
-func (n *jsiiProxy_NumberListMap) validateResolveParameters(_context IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (n *jsiiProxy_NumberListMap) validateResolveParameters(context IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

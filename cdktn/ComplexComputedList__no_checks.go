@@ -43,11 +43,11 @@ func (c *jsiiProxy_ComplexComputedList) validateGetStringMapAttributeParameters(
 	return nil
 }
 
-func (c *jsiiProxy_ComplexComputedList) validateInterpolationForAttributeParameters(property *string) error {
+func (c *jsiiProxy_ComplexComputedList) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (c *jsiiProxy_ComplexComputedList) validateResolveParameters(_context IResolveContext) error {
+func (c *jsiiProxy_ComplexComputedList) validateResolveParameters(context IResolveContext) error {
 	return nil
 }
 

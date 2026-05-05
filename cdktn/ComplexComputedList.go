@@ -79,11 +79,11 @@ type ComplexComputedList interface {
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Deprecated: Going to be replaced by Array of ComplexListItem
 	// and will be removed in the future.
-	InterpolationForAttribute(property *string) IResolvable
+	InterpolationForAttribute(terraformAttribute *string) IResolvable
 	// Produce the Token's value at resolution time.
 	// Deprecated: Going to be replaced by Array of ComplexListItem
 	// and will be removed in the future.
-	Resolve(_context IResolveContext) interface{}
+	Resolve(context IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -389,8 +389,8 @@ func (c *jsiiProxy_ComplexComputedList) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
-func (c *jsiiProxy_ComplexComputedList) InterpolationForAttribute(property *string) IResolvable {
-	if err := c.validateInterpolationForAttributeParameters(property); err != nil {
+func (c *jsiiProxy_ComplexComputedList) InterpolationForAttribute(terraformAttribute *string) IResolvable {
+	if err := c.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns IResolvable
@@ -398,15 +398,15 @@ func (c *jsiiProxy_ComplexComputedList) InterpolationForAttribute(property *stri
 	_jsii_.Invoke(
 		c,
 		"interpolationForAttribute",
-		[]interface{}{property},
+		[]interface{}{terraformAttribute},
 		&returns,
 	)
 
 	return returns
 }
 
-func (c *jsiiProxy_ComplexComputedList) Resolve(_context IResolveContext) interface{} {
-	if err := c.validateResolveParameters(_context); err != nil {
+func (c *jsiiProxy_ComplexComputedList) Resolve(context IResolveContext) interface{} {
+	if err := c.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -414,7 +414,7 @@ func (c *jsiiProxy_ComplexComputedList) Resolve(_context IResolveContext) interf
 	_jsii_.Invoke(
 		c,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

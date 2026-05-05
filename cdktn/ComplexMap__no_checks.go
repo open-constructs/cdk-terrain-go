@@ -11,7 +11,7 @@ func (c *jsiiProxy_ComplexMap) validateInterpolationForAttributeParameters(prope
 	return nil
 }
 
-func (c *jsiiProxy_ComplexMap) validateResolveParameters(_context IResolveContext) error {
+func (c *jsiiProxy_ComplexMap) validateResolveParameters(context IResolveContext) error {
 	return nil
 }
 

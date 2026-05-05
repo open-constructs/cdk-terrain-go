@@ -32,7 +32,7 @@ type RemoteBackend interface {
 	AddOverride(path *string, value interface{})
 	// Creates a TerraformRemoteState resource that accesses this backend.
 	// Experimental.
-	GetRemoteStateDataSource(scope constructs.Construct, name *string, _fromStack *string) TerraformRemoteState
+	GetRemoteStateDataSource(scope constructs.Construct, name *string, fromStack *string) TerraformRemoteState
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -53,6 +53,16 @@ type RemoteBackend interface {
 	// Adds this resource to the terraform JSON output.
 	// Experimental.
 	ToTerraform() interface{}
+	// Applies one or more mixins to this construct.
+	//
+	// Mixins are applied in order. The list of constructs is captured at the
+	// start of the call, so constructs added by a mixin will not be visited.
+	// Use multiple `with()` calls if subsequent mixins should apply to added
+	// constructs.
+	//
+	// Returns: This construct for chaining.
+	// Experimental.
+	With(mixins ...constructs.IMixin) constructs.IConstruct
 }
 
 // The jsii proxy struct for RemoteBackend
@@ -245,8 +255,8 @@ func (r *jsiiProxy_RemoteBackend) AddOverride(path *string, value interface{}) {
 	)
 }
 
-func (r *jsiiProxy_RemoteBackend) GetRemoteStateDataSource(scope constructs.Construct, name *string, _fromStack *string) TerraformRemoteState {
-	if err := r.validateGetRemoteStateDataSourceParameters(scope, name, _fromStack); err != nil {
+func (r *jsiiProxy_RemoteBackend) GetRemoteStateDataSource(scope constructs.Construct, name *string, fromStack *string) TerraformRemoteState {
+	if err := r.validateGetRemoteStateDataSourceParameters(scope, name, fromStack); err != nil {
 		panic(err)
 	}
 	var returns TerraformRemoteState
@@ -254,7 +264,7 @@ func (r *jsiiProxy_RemoteBackend) GetRemoteStateDataSource(scope constructs.Cons
 	_jsii_.Invoke(
 		r,
 		"getRemoteStateDataSource",
-		[]interface{}{scope, name, _fromStack},
+		[]interface{}{scope, name, fromStack},
 		&returns,
 	)
 
@@ -352,6 +362,24 @@ func (r *jsiiProxy_RemoteBackend) ToTerraform() interface{} {
 		r,
 		"toTerraform",
 		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RemoteBackend) With(mixins ...constructs.IMixin) constructs.IConstruct {
+	args := []interface{}{}
+	for _, a := range mixins {
+		args = append(args, a)
+	}
+
+	var returns constructs.IConstruct
+
+	_jsii_.Invoke(
+		r,
+		"with",
+		args,
 		&returns,
 	)
 

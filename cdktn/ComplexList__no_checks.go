@@ -11,7 +11,7 @@ func (c *jsiiProxy_ComplexList) validateAllWithMapKeyParameters(mapKeyAttributeN
 	return nil
 }
 
-func (c *jsiiProxy_ComplexList) validateResolveParameters(_context IResolveContext) error {
+func (c *jsiiProxy_ComplexList) validateResolveParameters(context IResolveContext) error {
 	return nil
 }
 

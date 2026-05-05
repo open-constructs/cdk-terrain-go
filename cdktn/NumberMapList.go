@@ -35,10 +35,10 @@ type NumberMapList interface {
 	// Experimental.
 	Get(index *float64) NumberMap
 	// Experimental.
-	InterpolationForAttribute(property *string) IResolvable
+	InterpolationForAttribute(terraformAttribute *string) IResolvable
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context IResolveContext) interface{}
+	Resolve(context IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -193,8 +193,8 @@ func (n *jsiiProxy_NumberMapList) Get(index *float64) NumberMap {
 	return returns
 }
 
-func (n *jsiiProxy_NumberMapList) InterpolationForAttribute(property *string) IResolvable {
-	if err := n.validateInterpolationForAttributeParameters(property); err != nil {
+func (n *jsiiProxy_NumberMapList) InterpolationForAttribute(terraformAttribute *string) IResolvable {
+	if err := n.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns IResolvable
@@ -202,15 +202,15 @@ func (n *jsiiProxy_NumberMapList) InterpolationForAttribute(property *string) IR
 	_jsii_.Invoke(
 		n,
 		"interpolationForAttribute",
-		[]interface{}{property},
+		[]interface{}{terraformAttribute},
 		&returns,
 	)
 
 	return returns
 }
 
-func (n *jsiiProxy_NumberMapList) Resolve(_context IResolveContext) interface{} {
-	if err := n.validateResolveParameters(_context); err != nil {
+func (n *jsiiProxy_NumberMapList) Resolve(context IResolveContext) interface{} {
+	if err := n.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -218,7 +218,7 @@ func (n *jsiiProxy_NumberMapList) Resolve(_context IResolveContext) interface{} 
 	_jsii_.Invoke(
 		n,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

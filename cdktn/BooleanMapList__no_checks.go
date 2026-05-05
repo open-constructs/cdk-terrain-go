@@ -11,11 +11,11 @@ func (b *jsiiProxy_BooleanMapList) validateGetParameters(index *float64) error {
 	return nil
 }
 
-func (b *jsiiProxy_BooleanMapList) validateInterpolationForAttributeParameters(property *string) error {
+func (b *jsiiProxy_BooleanMapList) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (b *jsiiProxy_BooleanMapList) validateResolveParameters(_context IResolveContext) error {
+func (b *jsiiProxy_BooleanMapList) validateResolveParameters(context IResolveContext) error {
 	return nil
 }
 

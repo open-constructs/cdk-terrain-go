@@ -61,10 +61,10 @@ type ComplexObject interface {
 	// Experimental.
 	InterpolationAsList() IResolvable
 	// Experimental.
-	InterpolationForAttribute(property *string) IResolvable
+	InterpolationForAttribute(terraformAttribute *string) IResolvable
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context IResolveContext) interface{}
+	Resolve(context IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -383,8 +383,8 @@ func (c *jsiiProxy_ComplexObject) InterpolationAsList() IResolvable {
 	return returns
 }
 
-func (c *jsiiProxy_ComplexObject) InterpolationForAttribute(property *string) IResolvable {
-	if err := c.validateInterpolationForAttributeParameters(property); err != nil {
+func (c *jsiiProxy_ComplexObject) InterpolationForAttribute(terraformAttribute *string) IResolvable {
+	if err := c.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns IResolvable
@@ -392,15 +392,15 @@ func (c *jsiiProxy_ComplexObject) InterpolationForAttribute(property *string) IR
 	_jsii_.Invoke(
 		c,
 		"interpolationForAttribute",
-		[]interface{}{property},
+		[]interface{}{terraformAttribute},
 		&returns,
 	)
 
 	return returns
 }
 
-func (c *jsiiProxy_ComplexObject) Resolve(_context IResolveContext) interface{} {
-	if err := c.validateResolveParameters(_context); err != nil {
+func (c *jsiiProxy_ComplexObject) Resolve(context IResolveContext) interface{} {
+	if err := c.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -408,7 +408,7 @@ func (c *jsiiProxy_ComplexObject) Resolve(_context IResolveContext) interface{} 
 	_jsii_.Invoke(
 		c,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

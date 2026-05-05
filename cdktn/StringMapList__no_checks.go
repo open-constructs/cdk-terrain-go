@@ -11,11 +11,11 @@ func (s *jsiiProxy_StringMapList) validateGetParameters(index *float64) error {
 	return nil
 }
 
-func (s *jsiiProxy_StringMapList) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_StringMapList) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_StringMapList) validateResolveParameters(_context IResolveContext) error {
+func (s *jsiiProxy_StringMapList) validateResolveParameters(context IResolveContext) error {
 	return nil
 }
 

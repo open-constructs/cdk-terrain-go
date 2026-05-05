@@ -35,10 +35,10 @@ type AnyMapList interface {
 	// Experimental.
 	Get(index *float64) AnyMap
 	// Experimental.
-	InterpolationForAttribute(property *string) IResolvable
+	InterpolationForAttribute(terraformAttribute *string) IResolvable
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context IResolveContext) interface{}
+	Resolve(context IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -193,8 +193,8 @@ func (a *jsiiProxy_AnyMapList) Get(index *float64) AnyMap {
 	return returns
 }
 
-func (a *jsiiProxy_AnyMapList) InterpolationForAttribute(property *string) IResolvable {
-	if err := a.validateInterpolationForAttributeParameters(property); err != nil {
+func (a *jsiiProxy_AnyMapList) InterpolationForAttribute(terraformAttribute *string) IResolvable {
+	if err := a.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns IResolvable
@@ -202,15 +202,15 @@ func (a *jsiiProxy_AnyMapList) InterpolationForAttribute(property *string) IReso
 	_jsii_.Invoke(
 		a,
 		"interpolationForAttribute",
-		[]interface{}{property},
+		[]interface{}{terraformAttribute},
 		&returns,
 	)
 
 	return returns
 }
 
-func (a *jsiiProxy_AnyMapList) Resolve(_context IResolveContext) interface{} {
-	if err := a.validateResolveParameters(_context); err != nil {
+func (a *jsiiProxy_AnyMapList) Resolve(context IResolveContext) interface{} {
+	if err := a.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -218,7 +218,7 @@ func (a *jsiiProxy_AnyMapList) Resolve(_context IResolveContext) interface{} {
 	_jsii_.Invoke(
 		a,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

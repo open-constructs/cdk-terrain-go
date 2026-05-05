@@ -11,7 +11,7 @@ func (n *jsiiProxy_NumberMap) validateLookupParameters(key *string) error {
 	return nil
 }
 
-func (n *jsiiProxy_NumberMap) validateResolveParameters(_context IResolveContext) error {
+func (n *jsiiProxy_NumberMap) validateResolveParameters(context IResolveContext) error {
 	return nil
 }
 

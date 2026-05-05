@@ -32,7 +32,7 @@ type S3Backend interface {
 	AddOverride(path *string, value interface{})
 	// Creates a TerraformRemoteState resource that accesses this backend.
 	// Experimental.
-	GetRemoteStateDataSource(scope constructs.Construct, name *string, _fromStack *string) TerraformRemoteState
+	GetRemoteStateDataSource(scope constructs.Construct, name *string, fromStack *string) TerraformRemoteState
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -53,6 +53,16 @@ type S3Backend interface {
 	// Adds this resource to the terraform JSON output.
 	// Experimental.
 	ToTerraform() interface{}
+	// Applies one or more mixins to this construct.
+	//
+	// Mixins are applied in order. The list of constructs is captured at the
+	// start of the call, so constructs added by a mixin will not be visited.
+	// Use multiple `with()` calls if subsequent mixins should apply to added
+	// constructs.
+	//
+	// Returns: This construct for chaining.
+	// Experimental.
+	With(mixins ...constructs.IMixin) constructs.IConstruct
 }
 
 // The jsii proxy struct for S3Backend
@@ -245,8 +255,8 @@ func (s *jsiiProxy_S3Backend) AddOverride(path *string, value interface{}) {
 	)
 }
 
-func (s *jsiiProxy_S3Backend) GetRemoteStateDataSource(scope constructs.Construct, name *string, _fromStack *string) TerraformRemoteState {
-	if err := s.validateGetRemoteStateDataSourceParameters(scope, name, _fromStack); err != nil {
+func (s *jsiiProxy_S3Backend) GetRemoteStateDataSource(scope constructs.Construct, name *string, fromStack *string) TerraformRemoteState {
+	if err := s.validateGetRemoteStateDataSourceParameters(scope, name, fromStack); err != nil {
 		panic(err)
 	}
 	var returns TerraformRemoteState
@@ -254,7 +264,7 @@ func (s *jsiiProxy_S3Backend) GetRemoteStateDataSource(scope constructs.Construc
 	_jsii_.Invoke(
 		s,
 		"getRemoteStateDataSource",
-		[]interface{}{scope, name, _fromStack},
+		[]interface{}{scope, name, fromStack},
 		&returns,
 	)
 
@@ -352,6 +362,24 @@ func (s *jsiiProxy_S3Backend) ToTerraform() interface{} {
 		s,
 		"toTerraform",
 		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_S3Backend) With(mixins ...constructs.IMixin) constructs.IConstruct {
+	args := []interface{}{}
+	for _, a := range mixins {
+		args = append(args, a)
+	}
+
+	var returns constructs.IConstruct
+
+	_jsii_.Invoke(
+		s,
+		"with",
+		args,
 		&returns,
 	)
 

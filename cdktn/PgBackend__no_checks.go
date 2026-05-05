@@ -11,7 +11,7 @@ func (p *jsiiProxy_PgBackend) validateAddOverrideParameters(path *string, value 
 	return nil
 }
 
-func (p *jsiiProxy_PgBackend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, _fromStack *string) error {
+func (p *jsiiProxy_PgBackend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, fromStack *string) error {
 	return nil
 }
 

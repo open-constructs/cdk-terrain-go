@@ -11,7 +11,7 @@ func (a *jsiiProxy_AzurermBackend) validateAddOverrideParameters(path *string, v
 	return nil
 }
 
-func (a *jsiiProxy_AzurermBackend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, _fromStack *string) error {
+func (a *jsiiProxy_AzurermBackend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, fromStack *string) error {
 	return nil
 }
 

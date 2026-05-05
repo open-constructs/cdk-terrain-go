@@ -15,7 +15,7 @@ func (s *jsiiProxy_StringListList) validateGetParameters(index *float64) error {
 	return nil
 }
 
-func (s *jsiiProxy_StringListList) validateResolveParameters(_context IResolveContext) error {
+func (s *jsiiProxy_StringListList) validateResolveParameters(context IResolveContext) error {
 	return nil
 }
 

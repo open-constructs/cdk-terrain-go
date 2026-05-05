@@ -7,19 +7,19 @@ package cdktn
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (d *jsiiProxy_DefaultTokenResolver) validateResolveListParameters(xs *[]*string, context IResolveContext) error {
+func (d *jsiiProxy_DefaultTokenResolver) validateResolveListParameters(l *[]*string, context IResolveContext) error {
 	return nil
 }
 
-func (d *jsiiProxy_DefaultTokenResolver) validateResolveMapParameters(xs *map[string]interface{}, context IResolveContext) error {
+func (d *jsiiProxy_DefaultTokenResolver) validateResolveMapParameters(m *map[string]interface{}, context IResolveContext) error {
 	return nil
 }
 
-func (d *jsiiProxy_DefaultTokenResolver) validateResolveNumberListParameters(xs *[]*float64, context IResolveContext) error {
+func (d *jsiiProxy_DefaultTokenResolver) validateResolveNumberListParameters(l *[]*float64, context IResolveContext) error {
 	return nil
 }
 
-func (d *jsiiProxy_DefaultTokenResolver) validateResolveStringParameters(fragments TokenizedStringFragments, context IResolveContext) error {
+func (d *jsiiProxy_DefaultTokenResolver) validateResolveStringParameters(s TokenizedStringFragments, context IResolveContext) error {
 	return nil
 }
 

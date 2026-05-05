@@ -17,9 +17,9 @@ func (n *jsiiProxy_NumberMap) validateLookupParameters(key *string) error {
 	return nil
 }
 
-func (n *jsiiProxy_NumberMap) validateResolveParameters(_context IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (n *jsiiProxy_NumberMap) validateResolveParameters(context IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

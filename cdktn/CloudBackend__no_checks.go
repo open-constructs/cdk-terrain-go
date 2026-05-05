@@ -11,7 +11,7 @@ func (c *jsiiProxy_CloudBackend) validateAddOverrideParameters(path *string, val
 	return nil
 }
 
-func (c *jsiiProxy_CloudBackend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, _fromStack *string) error {
+func (c *jsiiProxy_CloudBackend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, fromStack *string) error {
 	return nil
 }
 

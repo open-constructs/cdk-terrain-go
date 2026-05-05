@@ -40,7 +40,7 @@ type ComplexList interface {
 	ComputeFqn() *string
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context IResolveContext) interface{}
+	Resolve(context IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -178,8 +178,8 @@ func (c *jsiiProxy_ComplexList) ComputeFqn() *string {
 	return returns
 }
 
-func (c *jsiiProxy_ComplexList) Resolve(_context IResolveContext) interface{} {
-	if err := c.validateResolveParameters(_context); err != nil {
+func (c *jsiiProxy_ComplexList) Resolve(context IResolveContext) interface{} {
+	if err := c.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -187,7 +187,7 @@ func (c *jsiiProxy_ComplexList) Resolve(_context IResolveContext) interface{} {
 	_jsii_.Invoke(
 		c,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

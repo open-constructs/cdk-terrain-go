@@ -11,7 +11,7 @@ func (s *jsiiProxy_S3Backend) validateAddOverrideParameters(path *string, value 
 	return nil
 }
 
-func (s *jsiiProxy_S3Backend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, _fromStack *string) error {
+func (s *jsiiProxy_S3Backend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, fromStack *string) error {
 	return nil
 }
 

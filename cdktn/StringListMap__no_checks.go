@@ -15,7 +15,7 @@ func (s *jsiiProxy_StringListMap) validateInterpolationForAttributeParameters(pr
 	return nil
 }
 
-func (s *jsiiProxy_StringListMap) validateResolveParameters(_context IResolveContext) error {
+func (s *jsiiProxy_StringListMap) validateResolveParameters(context IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (b *jsiiProxy_BooleanListMap) validateInterpolationForAttributeParameters(p
 	return nil
 }
 
-func (b *jsiiProxy_BooleanListMap) validateResolveParameters(_context IResolveContext) error {
+func (b *jsiiProxy_BooleanListMap) validateResolveParameters(context IResolveContext) error {
 	return nil
 }
 

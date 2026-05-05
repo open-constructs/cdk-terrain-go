@@ -9,7 +9,7 @@ import (
 	"fmt"
 )
 
-func (b *jsiiProxy_BooleanMap) validateLookupParameters(key *string) error {
+func (s *jsiiProxy_StringMapMap) validateLookupParameters(key *string) error {
 	if key == nil {
 		return fmt.Errorf("parameter key is required, but nil was provided")
 	}
@@ -17,7 +17,7 @@ func (b *jsiiProxy_BooleanMap) validateLookupParameters(key *string) error {
 	return nil
 }
 
-func (b *jsiiProxy_BooleanMap) validateResolveParameters(context IResolveContext) error {
+func (s *jsiiProxy_StringMapMap) validateResolveParameters(context IResolveContext) error {
 	if context == nil {
 		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
@@ -25,7 +25,7 @@ func (b *jsiiProxy_BooleanMap) validateResolveParameters(context IResolveContext
 	return nil
 }
 
-func (j *jsiiProxy_BooleanMap) validateSetTerraformAttributeParameters(val *string) error {
+func (j *jsiiProxy_StringMapMap) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -33,7 +33,7 @@ func (j *jsiiProxy_BooleanMap) validateSetTerraformAttributeParameters(val *stri
 	return nil
 }
 
-func (j *jsiiProxy_BooleanMap) validateSetTerraformResourceParameters(val IInterpolatingParent) error {
+func (j *jsiiProxy_StringMapMap) validateSetTerraformResourceParameters(val IInterpolatingParent) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -41,7 +41,7 @@ func (j *jsiiProxy_BooleanMap) validateSetTerraformResourceParameters(val IInter
 	return nil
 }
 
-func validateNewBooleanMapParameters(terraformResource IInterpolatingParent, terraformAttribute *string) error {
+func validateNewStringMapMapParameters(terraformResource IInterpolatingParent, terraformAttribute *string) error {
 	if terraformResource == nil {
 		return fmt.Errorf("parameter terraformResource is required, but nil was provided")
 	}

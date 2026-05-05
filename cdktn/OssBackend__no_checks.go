@@ -11,7 +11,7 @@ func (o *jsiiProxy_OssBackend) validateAddOverrideParameters(path *string, value
 	return nil
 }
 
-func (o *jsiiProxy_OssBackend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, _fromStack *string) error {
+func (o *jsiiProxy_OssBackend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, fromStack *string) error {
 	return nil
 }
 

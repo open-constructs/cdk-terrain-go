@@ -11,7 +11,7 @@ func (c *jsiiProxy_CosBackend) validateAddOverrideParameters(path *string, value
 	return nil
 }
 
-func (c *jsiiProxy_CosBackend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, _fromStack *string) error {
+func (c *jsiiProxy_CosBackend) validateGetRemoteStateDataSourceParameters(scope constructs.Construct, name *string, fromStack *string) error {
 	return nil
 }
 

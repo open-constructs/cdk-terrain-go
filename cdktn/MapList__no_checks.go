@@ -7,11 +7,11 @@ package cdktn
 
 // Building without runtime type checking enabled, so all the below just return nil
 
-func (m *jsiiProxy_MapList) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_MapList) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_MapList) validateResolveParameters(_context IResolveContext) error {
+func (m *jsiiProxy_MapList) validateResolveParameters(context IResolveContext) error {
 	return nil
 }
 

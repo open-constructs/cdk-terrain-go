@@ -15,7 +15,7 @@ func (b *jsiiProxy_BooleanListList) validateGetParameters(index *float64) error 
 	return nil
 }
 
-func (b *jsiiProxy_BooleanListList) validateResolveParameters(_context IResolveContext) error {
+func (b *jsiiProxy_BooleanListList) validateResolveParameters(context IResolveContext) error {
 	return nil
 }
 
