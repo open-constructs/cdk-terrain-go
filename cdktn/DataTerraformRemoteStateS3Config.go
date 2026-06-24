@@ -70,7 +70,7 @@ type DataTerraformRemoteStateS3Config struct {
 	//
 	// The table must have a partition key named LockID with type of String.
 	// If not configured, state locking will be disabled.
-	// Experimental.
+	// Deprecated: Use useLockfile instead, which uses S3 for locking.
 	DynamodbTable *string `field:"optional" json:"dynamodbTable" yaml:"dynamodbTable"`
 	// Optional) Custom endpoint URL for the EC2 Instance Metadata Service (IMDS) API.
 	//
@@ -240,6 +240,16 @@ type DataTerraformRemoteStateS3Config struct {
 	// This behavior does not align with the authentication flow of the AWS CLI or SDK's, and will be removed in the future.
 	// Experimental.
 	UseLegacyWorkflow *bool `field:"optional" json:"useLegacyWorkflow" yaml:"useLegacyWorkflow"`
+	// (Optional) Whether to use a lockfile for locking the state file.
+	//
+	// Defaults to false.
+	// State locking is an opt-in feature of the S3 backend.
+	// Locking can be enabled via S3 or DynamoDB (see dynamodbTable). However, DynamoDB-based locking
+	//   is deprecated and will be removed in a future minor version. To support migration from older
+	//   versions of Terraform that only support DynamoDB-based locking, the S3 (useLockfile) and DynamoDB
+	//   (dynamodbTable) arguments can be configured simultaneously.
+	// Experimental.
+	UseLockfile *bool `field:"optional" json:"useLockfile" yaml:"useLockfile"`
 	// (Optional) Enable path-style S3 URLs (https://<HOST>/<BUCKET> instead of https://<BUCKET>.<HOST>).
 	// Experimental.
 	UsePathStyle *bool `field:"optional" json:"usePathStyle" yaml:"usePathStyle"`
