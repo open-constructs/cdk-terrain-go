@@ -57,6 +57,14 @@ func validateFn_Base64encodeParameters(str *string) error {
 	return nil
 }
 
+func validateFn_Base64gunzipParameters(str *string) error {
+	if str == nil {
+		return fmt.Errorf("parameter str is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateFn_Base64gzipParameters(str *string) error {
 	if str == nil {
 		return fmt.Errorf("parameter str is required, but nil was provided")
@@ -128,6 +136,18 @@ func validateFn_ChunklistParameters(list *[]interface{}, size *float64) error {
 
 	if size == nil {
 		return fmt.Errorf("parameter size is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateFn_CidrcontainsParameters(containing_prefix *string, contained_ip_or_prefix *string) error {
+	if containing_prefix == nil {
+		return fmt.Errorf("parameter containing_prefix is required, but nil was provided")
+	}
+
+	if contained_ip_or_prefix == nil {
+		return fmt.Errorf("parameter contained_ip_or_prefix is required, but nil was provided")
 	}
 
 	return nil
@@ -241,6 +261,18 @@ func validateFn_ContainsParameters(list interface{}, value interface{}) error {
 	return nil
 }
 
+func validateFn_ConvertParameters(value interface{}, type_ interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+
+	if type_ == nil {
+		return fmt.Errorf("parameter type_ is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateFn_CsvdecodeParameters(str *string) error {
 	if str == nil {
 		return fmt.Errorf("parameter str is required, but nil was provided")
@@ -284,6 +316,14 @@ func validateFn_EndswithParameters(str *string, suffix *string) error {
 
 	if suffix == nil {
 		return fmt.Errorf("parameter suffix is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateFn_EphemeralasnullParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
 
 	return nil
@@ -442,6 +482,14 @@ func validateFn_IndexParameters(list interface{}, value interface{}) error {
 		return fmt.Errorf("parameter list is required, but nil was provided")
 	}
 
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateFn_IssensitiveParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -901,6 +949,18 @@ func validateFn_TemplatefileParameters(path *string, vars interface{}) error {
 	return nil
 }
 
+func validateFn_TemplatestringParameters(template *string, vars interface{}) error {
+	if template == nil {
+		return fmt.Errorf("parameter template is required, but nil was provided")
+	}
+
+	if vars == nil {
+		return fmt.Errorf("parameter vars is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateFn_Textdecodebase64Parameters(source *string, encoding *string) error {
 	if source == nil {
 		return fmt.Errorf("parameter source is required, but nil was provided")
@@ -1066,6 +1126,14 @@ func validateFn_TryParameters(expressions *[]interface{}) error {
 }
 
 func validateFn_UpperParameters(str *string) error {
+	if str == nil {
+		return fmt.Errorf("parameter str is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateFn_UrldecodeParameters(str *string) error {
 	if str == nil {
 		return fmt.Errorf("parameter str is required, but nil was provided")
 	}

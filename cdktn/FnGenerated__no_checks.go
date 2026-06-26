@@ -31,6 +31,10 @@ func validateFnGenerated_Base64encodeParameters(str *string) error {
 	return nil
 }
 
+func validateFnGenerated_Base64gunzipParameters(str *string) error {
+	return nil
+}
+
 func validateFnGenerated_Base64gzipParameters(str *string) error {
 	return nil
 }
@@ -60,6 +64,10 @@ func validateFnGenerated_ChompParameters(str *string) error {
 }
 
 func validateFnGenerated_ChunklistParameters(list *[]interface{}, size *float64) error {
+	return nil
+}
+
+func validateFnGenerated_CidrcontainsParameters(containing_prefix *string, contained_ip_or_prefix *string) error {
 	return nil
 }
 
@@ -99,6 +107,10 @@ func validateFnGenerated_ContainsParameters(list interface{}, value interface{})
 	return nil
 }
 
+func validateFnGenerated_ConvertParameters(value interface{}, type_ interface{}) error {
+	return nil
+}
+
 func validateFnGenerated_CsvdecodeParameters(str *string) error {
 	return nil
 }
@@ -116,6 +128,10 @@ func validateFnGenerated_ElementParameters(list interface{}, index *float64) err
 }
 
 func validateFnGenerated_EndswithParameters(str *string, suffix *string) error {
+	return nil
+}
+
+func validateFnGenerated_EphemeralasnullParameters(value interface{}) error {
 	return nil
 }
 
@@ -184,6 +200,10 @@ func validateFnGenerated_IndentParameters(spaces *float64, str *string) error {
 }
 
 func validateFnGenerated_IndexParameters(list interface{}, value interface{}) error {
+	return nil
+}
+
+func validateFnGenerated_IssensitiveParameters(value interface{}) error {
 	return nil
 }
 
@@ -343,6 +363,10 @@ func validateFnGenerated_TemplatefileParameters(path *string, vars interface{}) 
 	return nil
 }
 
+func validateFnGenerated_TemplatestringParameters(template *string, vars interface{}) error {
+	return nil
+}
+
 func validateFnGenerated_Textdecodebase64Parameters(source *string, encoding *string) error {
 	return nil
 }
@@ -412,6 +436,10 @@ func validateFnGenerated_TryParameters(expressions *[]interface{}) error {
 }
 
 func validateFnGenerated_UpperParameters(str *string) error {
+	return nil
+}
+
+func validateFnGenerated_UrldecodeParameters(str *string) error {
 	return nil
 }
 

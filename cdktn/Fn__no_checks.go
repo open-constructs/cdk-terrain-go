@@ -31,6 +31,10 @@ func validateFn_Base64encodeParameters(str *string) error {
 	return nil
 }
 
+func validateFn_Base64gunzipParameters(str *string) error {
+	return nil
+}
+
 func validateFn_Base64gzipParameters(str *string) error {
 	return nil
 }
@@ -64,6 +68,10 @@ func validateFn_ChompParameters(str *string) error {
 }
 
 func validateFn_ChunklistParameters(list *[]interface{}, size *float64) error {
+	return nil
+}
+
+func validateFn_CidrcontainsParameters(containing_prefix *string, contained_ip_or_prefix *string) error {
 	return nil
 }
 
@@ -107,6 +115,10 @@ func validateFn_ContainsParameters(list interface{}, value interface{}) error {
 	return nil
 }
 
+func validateFn_ConvertParameters(value interface{}, type_ interface{}) error {
+	return nil
+}
+
 func validateFn_CsvdecodeParameters(str *string) error {
 	return nil
 }
@@ -124,6 +136,10 @@ func validateFn_ElementParameters(list interface{}, index *float64) error {
 }
 
 func validateFn_EndswithParameters(str *string, suffix *string) error {
+	return nil
+}
+
+func validateFn_EphemeralasnullParameters(value interface{}) error {
 	return nil
 }
 
@@ -192,6 +208,10 @@ func validateFn_IndentParameters(spaces *float64, str *string) error {
 }
 
 func validateFn_IndexParameters(list interface{}, value interface{}) error {
+	return nil
+}
+
+func validateFn_IssensitiveParameters(value interface{}) error {
 	return nil
 }
 
@@ -371,6 +391,10 @@ func validateFn_TemplatefileParameters(path *string, vars interface{}) error {
 	return nil
 }
 
+func validateFn_TemplatestringParameters(template *string, vars interface{}) error {
+	return nil
+}
+
 func validateFn_Textdecodebase64Parameters(source *string, encoding *string) error {
 	return nil
 }
@@ -440,6 +464,10 @@ func validateFn_TryParameters(expressions *[]interface{}) error {
 }
 
 func validateFn_UpperParameters(str *string) error {
+	return nil
+}
+
+func validateFn_UrldecodeParameters(str *string) error {
 	return nil
 }
 

@@ -163,6 +163,26 @@ func FnGenerated_Base64encode(str *string) *string {
 	return returns
 }
 
+// {@link https://opentofu.org/docs/language/functions/base64gunzip base64gunzip} decodes a Base64-encoded string and uncompresses the result with gzip.
+// Experimental.
+func FnGenerated_Base64gunzip(str *string) *string {
+	_init_.Initialize()
+
+	if err := validateFnGenerated_Base64gunzipParameters(str); err != nil {
+		panic(err)
+	}
+	var returns *string
+
+	_jsii_.StaticInvoke(
+		"cdktn.FnGenerated",
+		"base64gunzip",
+		[]interface{}{str},
+		&returns,
+	)
+
+	return returns
+}
+
 // {@link https://developer.hashicorp.com/terraform/language/functions/base64gzip base64gzip} compresses a string with gzip and then encodes the result in Base64 encoding.
 // Experimental.
 func FnGenerated_Base64gzip(str *string) *string {
@@ -317,6 +337,26 @@ func FnGenerated_Chunklist(list *[]interface{}, size *float64) *[]*string {
 		"cdktn.FnGenerated",
 		"chunklist",
 		[]interface{}{list, size},
+		&returns,
+	)
+
+	return returns
+}
+
+// {@link https://opentofu.org/docs/language/functions/cidrcontains cidrcontains} determines whether a given IP address or an address prefix given in CIDR notation is within a given IP network address prefix.
+// Experimental.
+func FnGenerated_Cidrcontains(containing_prefix *string, contained_ip_or_prefix *string) IResolvable {
+	_init_.Initialize()
+
+	if err := validateFnGenerated_CidrcontainsParameters(containing_prefix, contained_ip_or_prefix); err != nil {
+		panic(err)
+	}
+	var returns IResolvable
+
+	_jsii_.StaticInvoke(
+		"cdktn.FnGenerated",
+		"cidrcontains",
+		[]interface{}{containing_prefix, contained_ip_or_prefix},
 		&returns,
 	)
 
@@ -503,6 +543,26 @@ func FnGenerated_Contains(list interface{}, value interface{}) interface{} {
 	return returns
 }
 
+// {@link https://developer.hashicorp.com/terraform/language/functions/convert convert} converts a value to the given type constraint.
+// Experimental.
+func FnGenerated_Convert(value interface{}, type_ interface{}) interface{} {
+	_init_.Initialize()
+
+	if err := validateFnGenerated_ConvertParameters(value, type_); err != nil {
+		panic(err)
+	}
+	var returns interface{}
+
+	_jsii_.StaticInvoke(
+		"cdktn.FnGenerated",
+		"convert",
+		[]interface{}{value, type_},
+		&returns,
+	)
+
+	return returns
+}
+
 // {@link https://developer.hashicorp.com/terraform/language/functions/csvdecode csvdecode} decodes a string containing CSV-formatted data and produces a list of maps representing that data.
 // Experimental.
 func FnGenerated_Csvdecode(str *string) interface{} {
@@ -597,6 +657,26 @@ func FnGenerated_Endswith(str *string, suffix *string) IResolvable {
 		"cdktn.FnGenerated",
 		"endswith",
 		[]interface{}{str, suffix},
+		&returns,
+	)
+
+	return returns
+}
+
+// {@link https://developer.hashicorp.com/terraform/language/functions/ephemeralasnull ephemeralasnull} takes a value of any type and returns a similar value of the same type with any ephemeral values replaced with non-ephemeral null values and all non-ephemeral values preserved.
+// Experimental.
+func FnGenerated_Ephemeralasnull(value interface{}) interface{} {
+	_init_.Initialize()
+
+	if err := validateFnGenerated_EphemeralasnullParameters(value); err != nil {
+		panic(err)
+	}
+	var returns interface{}
+
+	_jsii_.StaticInvoke(
+		"cdktn.FnGenerated",
+		"ephemeralasnull",
+		[]interface{}{value},
 		&returns,
 	)
 
@@ -845,13 +925,13 @@ func FnGenerated_Floor(num *float64) *float64 {
 
 // The {@link https://developer.hashicorp.com/terraform/language/functions/format format} function produces a string by formatting a number of other values according to a specification string. It is similar to the `printf` function in C, and other similar functions in other programming languages.
 // Experimental.
-func FnGenerated_Format(format *string, args *[]interface{}) interface{} {
+func FnGenerated_Format(format *string, args *[]interface{}) *string {
 	_init_.Initialize()
 
 	if err := validateFnGenerated_FormatParameters(format, args); err != nil {
 		panic(err)
 	}
-	var returns interface{}
+	var returns *string
 
 	_jsii_.StaticInvoke(
 		"cdktn.FnGenerated",
@@ -885,13 +965,13 @@ func FnGenerated_Formatdate(format *string, time *string) *string {
 
 // {@link https://developer.hashicorp.com/terraform/language/functions/formatlist formatlist} produces a list of strings by formatting a number of other values according to a specification string.
 // Experimental.
-func FnGenerated_Formatlist(format *string, args *[]interface{}) interface{} {
+func FnGenerated_Formatlist(format *string, args *[]interface{}) *[]*string {
 	_init_.Initialize()
 
 	if err := validateFnGenerated_FormatlistParameters(format, args); err != nil {
 		panic(err)
 	}
-	var returns interface{}
+	var returns *[]*string
 
 	_jsii_.StaticInvoke(
 		"cdktn.FnGenerated",
@@ -937,6 +1017,26 @@ func FnGenerated_Index(list interface{}, value interface{}) interface{} {
 		"cdktn.FnGenerated",
 		"index",
 		[]interface{}{list, value},
+		&returns,
+	)
+
+	return returns
+}
+
+// {@link https://developer.hashicorp.com/terraform/language/functions/issensitive issensitive} takes a value and returns a boolean indicating if the value is sensitive.
+// Experimental.
+func FnGenerated_Issensitive(value interface{}) IResolvable {
+	_init_.Initialize()
+
+	if err := validateFnGenerated_IssensitiveParameters(value); err != nil {
+		panic(err)
+	}
+	var returns IResolvable
+
+	_jsii_.StaticInvoke(
+		"cdktn.FnGenerated",
+		"issensitive",
+		[]interface{}{value},
 		&returns,
 	)
 
@@ -1740,6 +1840,26 @@ func FnGenerated_Templatefile(path *string, vars interface{}) interface{} {
 	return returns
 }
 
+// {@link https://developer.hashicorp.com/terraform/language/functions/templatestring templatestring} takes a string from elsewhere in the module and renders its content as a template using a supplied set of template variables.
+// Experimental.
+func FnGenerated_Templatestring(template *string, vars interface{}) *string {
+	_init_.Initialize()
+
+	if err := validateFnGenerated_TemplatestringParameters(template, vars); err != nil {
+		panic(err)
+	}
+	var returns *string
+
+	_jsii_.StaticInvoke(
+		"cdktn.FnGenerated",
+		"templatestring",
+		[]interface{}{template, vars},
+		&returns,
+	)
+
+	return returns
+}
+
 // {@link https://developer.hashicorp.com/terraform/language/functions/textdecodebase64 textdecodebase64} function decodes a string that was previously Base64-encoded, and then interprets the result as characters in a specified character encoding.
 // Experimental.
 func FnGenerated_Textdecodebase64(source *string, encoding *string) *string {
@@ -2110,6 +2230,26 @@ func FnGenerated_Upper(str *string) *string {
 	_jsii_.StaticInvoke(
 		"cdktn.FnGenerated",
 		"upper",
+		[]interface{}{str},
+		&returns,
+	)
+
+	return returns
+}
+
+// {@link https://opentofu.org/docs/language/functions/urldecode urldecode} applies URL decoding to a given encoded string.
+// Experimental.
+func FnGenerated_Urldecode(str *string) *string {
+	_init_.Initialize()
+
+	if err := validateFnGenerated_UrldecodeParameters(str); err != nil {
+		panic(err)
+	}
+	var returns *string
+
+	_jsii_.StaticInvoke(
+		"cdktn.FnGenerated",
+		"urldecode",
 		[]interface{}{str},
 		&returns,
 	)

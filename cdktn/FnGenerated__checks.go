@@ -57,6 +57,14 @@ func validateFnGenerated_Base64encodeParameters(str *string) error {
 	return nil
 }
 
+func validateFnGenerated_Base64gunzipParameters(str *string) error {
+	if str == nil {
+		return fmt.Errorf("parameter str is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateFnGenerated_Base64gzipParameters(str *string) error {
 	if str == nil {
 		return fmt.Errorf("parameter str is required, but nil was provided")
@@ -120,6 +128,18 @@ func validateFnGenerated_ChunklistParameters(list *[]interface{}, size *float64)
 
 	if size == nil {
 		return fmt.Errorf("parameter size is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateFnGenerated_CidrcontainsParameters(containing_prefix *string, contained_ip_or_prefix *string) error {
+	if containing_prefix == nil {
+		return fmt.Errorf("parameter containing_prefix is required, but nil was provided")
+	}
+
+	if contained_ip_or_prefix == nil {
+		return fmt.Errorf("parameter contained_ip_or_prefix is required, but nil was provided")
 	}
 
 	return nil
@@ -217,6 +237,18 @@ func validateFnGenerated_ContainsParameters(list interface{}, value interface{})
 	return nil
 }
 
+func validateFnGenerated_ConvertParameters(value interface{}, type_ interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+
+	if type_ == nil {
+		return fmt.Errorf("parameter type_ is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateFnGenerated_CsvdecodeParameters(str *string) error {
 	if str == nil {
 		return fmt.Errorf("parameter str is required, but nil was provided")
@@ -260,6 +292,14 @@ func validateFnGenerated_EndswithParameters(str *string, suffix *string) error {
 
 	if suffix == nil {
 		return fmt.Errorf("parameter suffix is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateFnGenerated_EphemeralasnullParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
 
 	return nil
@@ -418,6 +458,14 @@ func validateFnGenerated_IndexParameters(list interface{}, value interface{}) er
 		return fmt.Errorf("parameter list is required, but nil was provided")
 	}
 
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateFnGenerated_IssensitiveParameters(value interface{}) error {
 	if value == nil {
 		return fmt.Errorf("parameter value is required, but nil was provided")
 	}
@@ -821,6 +869,18 @@ func validateFnGenerated_TemplatefileParameters(path *string, vars interface{}) 
 	return nil
 }
 
+func validateFnGenerated_TemplatestringParameters(template *string, vars interface{}) error {
+	if template == nil {
+		return fmt.Errorf("parameter template is required, but nil was provided")
+	}
+
+	if vars == nil {
+		return fmt.Errorf("parameter vars is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateFnGenerated_Textdecodebase64Parameters(source *string, encoding *string) error {
 	if source == nil {
 		return fmt.Errorf("parameter source is required, but nil was provided")
@@ -986,6 +1046,14 @@ func validateFnGenerated_TryParameters(expressions *[]interface{}) error {
 }
 
 func validateFnGenerated_UpperParameters(str *string) error {
+	if str == nil {
+		return fmt.Errorf("parameter str is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateFnGenerated_UrldecodeParameters(str *string) error {
 	if str == nil {
 		return fmt.Errorf("parameter str is required, but nil was provided")
 	}

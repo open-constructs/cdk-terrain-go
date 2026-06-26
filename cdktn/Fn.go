@@ -164,6 +164,26 @@ func Fn_Base64encode(str *string) *string {
 	return returns
 }
 
+// {@link https://opentofu.org/docs/language/functions/base64gunzip base64gunzip} decodes a Base64-encoded string and uncompresses the result with gzip.
+// Experimental.
+func Fn_Base64gunzip(str *string) *string {
+	_init_.Initialize()
+
+	if err := validateFn_Base64gunzipParameters(str); err != nil {
+		panic(err)
+	}
+	var returns *string
+
+	_jsii_.StaticInvoke(
+		"cdktn.Fn",
+		"base64gunzip",
+		[]interface{}{str},
+		&returns,
+	)
+
+	return returns
+}
+
 // {@link https://developer.hashicorp.com/terraform/language/functions/base64gzip base64gzip} compresses a string with gzip and then encodes the result in Base64 encoding.
 // Experimental.
 func Fn_Base64gzip(str *string) *string {
@@ -338,6 +358,26 @@ func Fn_Chunklist(list *[]interface{}, size *float64) *[]*string {
 		"cdktn.Fn",
 		"chunklist",
 		[]interface{}{list, size},
+		&returns,
+	)
+
+	return returns
+}
+
+// {@link https://opentofu.org/docs/language/functions/cidrcontains cidrcontains} determines whether a given IP address or an address prefix given in CIDR notation is within a given IP network address prefix.
+// Experimental.
+func Fn_Cidrcontains(containing_prefix *string, contained_ip_or_prefix *string) IResolvable {
+	_init_.Initialize()
+
+	if err := validateFn_CidrcontainsParameters(containing_prefix, contained_ip_or_prefix); err != nil {
+		panic(err)
+	}
+	var returns IResolvable
+
+	_jsii_.StaticInvoke(
+		"cdktn.Fn",
+		"cidrcontains",
+		[]interface{}{containing_prefix, contained_ip_or_prefix},
 		&returns,
 	)
 
@@ -544,6 +584,26 @@ func Fn_Contains(list interface{}, value interface{}) interface{} {
 	return returns
 }
 
+// {@link https://developer.hashicorp.com/terraform/language/functions/convert convert} converts a value to the given type constraint.
+// Experimental.
+func Fn_Convert(value interface{}, type_ interface{}) interface{} {
+	_init_.Initialize()
+
+	if err := validateFn_ConvertParameters(value, type_); err != nil {
+		panic(err)
+	}
+	var returns interface{}
+
+	_jsii_.StaticInvoke(
+		"cdktn.Fn",
+		"convert",
+		[]interface{}{value, type_},
+		&returns,
+	)
+
+	return returns
+}
+
 // {@link https://developer.hashicorp.com/terraform/language/functions/csvdecode csvdecode} decodes a string containing CSV-formatted data and produces a list of maps representing that data.
 // Experimental.
 func Fn_Csvdecode(str *string) interface{} {
@@ -638,6 +698,26 @@ func Fn_Endswith(str *string, suffix *string) IResolvable {
 		"cdktn.Fn",
 		"endswith",
 		[]interface{}{str, suffix},
+		&returns,
+	)
+
+	return returns
+}
+
+// {@link https://developer.hashicorp.com/terraform/language/functions/ephemeralasnull ephemeralasnull} takes a value of any type and returns a similar value of the same type with any ephemeral values replaced with non-ephemeral null values and all non-ephemeral values preserved.
+// Experimental.
+func Fn_Ephemeralasnull(value interface{}) interface{} {
+	_init_.Initialize()
+
+	if err := validateFn_EphemeralasnullParameters(value); err != nil {
+		panic(err)
+	}
+	var returns interface{}
+
+	_jsii_.StaticInvoke(
+		"cdktn.Fn",
+		"ephemeralasnull",
+		[]interface{}{value},
 		&returns,
 	)
 
@@ -886,13 +966,13 @@ func Fn_Floor(num *float64) *float64 {
 
 // The {@link https://developer.hashicorp.com/terraform/language/functions/format format} function produces a string by formatting a number of other values according to a specification string. It is similar to the `printf` function in C, and other similar functions in other programming languages.
 // Experimental.
-func Fn_Format(format *string, args *[]interface{}) interface{} {
+func Fn_Format(format *string, args *[]interface{}) *string {
 	_init_.Initialize()
 
 	if err := validateFn_FormatParameters(format, args); err != nil {
 		panic(err)
 	}
-	var returns interface{}
+	var returns *string
 
 	_jsii_.StaticInvoke(
 		"cdktn.Fn",
@@ -926,13 +1006,13 @@ func Fn_Formatdate(format *string, time *string) *string {
 
 // {@link https://developer.hashicorp.com/terraform/language/functions/formatlist formatlist} produces a list of strings by formatting a number of other values according to a specification string.
 // Experimental.
-func Fn_Formatlist(format *string, args *[]interface{}) interface{} {
+func Fn_Formatlist(format *string, args *[]interface{}) *[]*string {
 	_init_.Initialize()
 
 	if err := validateFn_FormatlistParameters(format, args); err != nil {
 		panic(err)
 	}
-	var returns interface{}
+	var returns *[]*string
 
 	_jsii_.StaticInvoke(
 		"cdktn.Fn",
@@ -978,6 +1058,26 @@ func Fn_Index(list interface{}, value interface{}) interface{} {
 		"cdktn.Fn",
 		"index",
 		[]interface{}{list, value},
+		&returns,
+	)
+
+	return returns
+}
+
+// {@link https://developer.hashicorp.com/terraform/language/functions/issensitive issensitive} takes a value and returns a boolean indicating if the value is sensitive.
+// Experimental.
+func Fn_Issensitive(value interface{}) IResolvable {
+	_init_.Initialize()
+
+	if err := validateFn_IssensitiveParameters(value); err != nil {
+		panic(err)
+	}
+	var returns IResolvable
+
+	_jsii_.StaticInvoke(
+		"cdktn.Fn",
+		"issensitive",
+		[]interface{}{value},
 		&returns,
 	)
 
@@ -1883,6 +1983,26 @@ func Fn_Templatefile(path *string, vars interface{}) interface{} {
 	return returns
 }
 
+// {@link https://developer.hashicorp.com/terraform/language/functions/templatestring templatestring} takes a string from elsewhere in the module and renders its content as a template using a supplied set of template variables.
+// Experimental.
+func Fn_Templatestring(template *string, vars interface{}) *string {
+	_init_.Initialize()
+
+	if err := validateFn_TemplatestringParameters(template, vars); err != nil {
+		panic(err)
+	}
+	var returns *string
+
+	_jsii_.StaticInvoke(
+		"cdktn.Fn",
+		"templatestring",
+		[]interface{}{template, vars},
+		&returns,
+	)
+
+	return returns
+}
+
 // {@link https://developer.hashicorp.com/terraform/language/functions/textdecodebase64 textdecodebase64} function decodes a string that was previously Base64-encoded, and then interprets the result as characters in a specified character encoding.
 // Experimental.
 func Fn_Textdecodebase64(source *string, encoding *string) *string {
@@ -2253,6 +2373,26 @@ func Fn_Upper(str *string) *string {
 	_jsii_.StaticInvoke(
 		"cdktn.Fn",
 		"upper",
+		[]interface{}{str},
+		&returns,
+	)
+
+	return returns
+}
+
+// {@link https://opentofu.org/docs/language/functions/urldecode urldecode} applies URL decoding to a given encoded string.
+// Experimental.
+func Fn_Urldecode(str *string) *string {
+	_init_.Initialize()
+
+	if err := validateFn_UrldecodeParameters(str); err != nil {
+		panic(err)
+	}
+	var returns *string
+
+	_jsii_.StaticInvoke(
+		"cdktn.Fn",
+		"urldecode",
 		[]interface{}{str},
 		&returns,
 	)
