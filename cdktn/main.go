@@ -115,6 +115,26 @@ func init() {
 		},
 	)
 	_jsii_.RegisterClass(
+		"cdktn.AnyMapMap",
+		reflect.TypeOf((*AnyMapMap)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "lookup", GoMethod: "Lookup"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AnyMapMap{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IResolvable)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ITerraformAddressable)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
 		"cdktn.App",
 		reflect.TypeOf((*App)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -293,6 +313,26 @@ func init() {
 		func() interface{} {
 			j := jsiiProxy_BooleanMapList{}
 			_jsii_.InitJsiiProxy(&j.jsiiProxy_MapList)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"cdktn.BooleanMapMap",
+		reflect.TypeOf((*BooleanMapMap)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "lookup", GoMethod: "Lookup"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_BooleanMapMap{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IResolvable)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ITerraformAddressable)
 			return &j
 		},
 	)
@@ -1678,6 +1718,26 @@ func init() {
 		func() interface{} {
 			j := jsiiProxy_NumberMapList{}
 			_jsii_.InitJsiiProxy(&j.jsiiProxy_MapList)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"cdktn.NumberMapMap",
+		reflect.TypeOf((*NumberMapMap)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "lookup", GoMethod: "Lookup"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_NumberMapMap{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IResolvable)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ITerraformAddressable)
 			return &j
 		},
 	)
