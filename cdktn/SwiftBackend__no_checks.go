@@ -19,6 +19,10 @@ func (s *jsiiProxy_SwiftBackend) validateOverrideLogicalIdParameters(newLogicalI
 	return nil
 }
 
+func (s *jsiiProxy_SwiftBackend) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateSwiftBackend_IsBackendParameters(x interface{}) error {
 	return nil
 }

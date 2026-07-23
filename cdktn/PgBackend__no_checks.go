@@ -19,6 +19,10 @@ func (p *jsiiProxy_PgBackend) validateOverrideLogicalIdParameters(newLogicalId *
 	return nil
 }
 
+func (p *jsiiProxy_PgBackend) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validatePgBackend_IsBackendParameters(x interface{}) error {
 	return nil
 }

@@ -43,6 +43,10 @@ func (t *jsiiProxy_TerraformHclModule) validateOverrideLogicalIdParameters(newLo
 	return nil
 }
 
+func (t *jsiiProxy_TerraformHclModule) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func (t *jsiiProxy_TerraformHclModule) validateSetParameters(variable *string, value interface{}) error {
 	return nil
 }

@@ -19,6 +19,10 @@ func (r *jsiiProxy_RemoteBackend) validateOverrideLogicalIdParameters(newLogical
 	return nil
 }
 
+func (r *jsiiProxy_RemoteBackend) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateRemoteBackend_IsBackendParameters(x interface{}) error {
 	return nil
 }

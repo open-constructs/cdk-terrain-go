@@ -55,6 +55,10 @@ func (t *jsiiProxy_TerraformDataSource) validateOverrideLogicalIdParameters(newL
 	return nil
 }
 
+func (t *jsiiProxy_TerraformDataSource) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateTerraformDataSource_IsConstructParameters(x interface{}) error {
 	return nil
 }

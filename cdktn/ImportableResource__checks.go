@@ -31,6 +31,14 @@ func (i *jsiiProxy_ImportableResource) validateOverrideLogicalIdParameters(newLo
 	return nil
 }
 
+func (i *jsiiProxy_ImportableResource) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	if feature == "" {
+		return fmt.Errorf("parameter feature is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateImportableResource_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")

@@ -44,6 +44,14 @@ func (t *jsiiProxy_TerraformVariable) validateOverrideLogicalIdParameters(newLog
 	return nil
 }
 
+func (t *jsiiProxy_TerraformVariable) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	if feature == "" {
+		return fmt.Errorf("parameter feature is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateTerraformVariable_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")

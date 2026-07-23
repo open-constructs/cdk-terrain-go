@@ -49,6 +49,14 @@ func (s *jsiiProxy_SwiftBackend) validateOverrideLogicalIdParameters(newLogicalI
 	return nil
 }
 
+func (s *jsiiProxy_SwiftBackend) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	if feature == "" {
+		return fmt.Errorf("parameter feature is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateSwiftBackend_IsBackendParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")

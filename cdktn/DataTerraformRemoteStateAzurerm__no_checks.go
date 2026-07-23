@@ -35,6 +35,10 @@ func (d *jsiiProxy_DataTerraformRemoteStateAzurerm) validateOverrideLogicalIdPar
 	return nil
 }
 
+func (d *jsiiProxy_DataTerraformRemoteStateAzurerm) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateDataTerraformRemoteStateAzurerm_IsConstructParameters(x interface{}) error {
 	return nil
 }

@@ -19,6 +19,10 @@ func (a *jsiiProxy_AzurermBackend) validateOverrideLogicalIdParameters(newLogica
 	return nil
 }
 
+func (a *jsiiProxy_AzurermBackend) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateAzurermBackend_IsBackendParameters(x interface{}) error {
 	return nil
 }

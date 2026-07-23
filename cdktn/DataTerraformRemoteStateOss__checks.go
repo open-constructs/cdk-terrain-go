@@ -73,6 +73,14 @@ func (d *jsiiProxy_DataTerraformRemoteStateOss) validateOverrideLogicalIdParamet
 	return nil
 }
 
+func (d *jsiiProxy_DataTerraformRemoteStateOss) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	if feature == "" {
+		return fmt.Errorf("parameter feature is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateDataTerraformRemoteStateOss_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")

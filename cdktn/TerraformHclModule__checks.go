@@ -108,6 +108,14 @@ func (t *jsiiProxy_TerraformHclModule) validateOverrideLogicalIdParameters(newLo
 	return nil
 }
 
+func (t *jsiiProxy_TerraformHclModule) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	if feature == "" {
+		return fmt.Errorf("parameter feature is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (t *jsiiProxy_TerraformHclModule) validateSetParameters(variable *string, value interface{}) error {
 	if variable == nil {
 		return fmt.Errorf("parameter variable is required, but nil was provided")

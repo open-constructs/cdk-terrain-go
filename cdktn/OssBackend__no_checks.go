@@ -19,6 +19,10 @@ func (o *jsiiProxy_OssBackend) validateOverrideLogicalIdParameters(newLogicalId 
 	return nil
 }
 
+func (o *jsiiProxy_OssBackend) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateOssBackend_IsBackendParameters(x interface{}) error {
 	return nil
 }

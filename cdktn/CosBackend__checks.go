@@ -49,6 +49,14 @@ func (c *jsiiProxy_CosBackend) validateOverrideLogicalIdParameters(newLogicalId 
 	return nil
 }
 
+func (c *jsiiProxy_CosBackend) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	if feature == "" {
+		return fmt.Errorf("parameter feature is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateCosBackend_IsBackendParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")

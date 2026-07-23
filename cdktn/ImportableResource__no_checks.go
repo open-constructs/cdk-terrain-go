@@ -15,6 +15,10 @@ func (i *jsiiProxy_ImportableResource) validateOverrideLogicalIdParameters(newLo
 	return nil
 }
 
+func (i *jsiiProxy_ImportableResource) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateImportableResource_IsConstructParameters(x interface{}) error {
 	return nil
 }

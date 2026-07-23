@@ -19,6 +19,10 @@ func (t *jsiiProxy_TerraformVariable) validateOverrideLogicalIdParameters(newLog
 	return nil
 }
 
+func (t *jsiiProxy_TerraformVariable) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateTerraformVariable_IsConstructParameters(x interface{}) error {
 	return nil
 }

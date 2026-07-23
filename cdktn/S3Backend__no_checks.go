@@ -19,6 +19,10 @@ func (s *jsiiProxy_S3Backend) validateOverrideLogicalIdParameters(newLogicalId *
 	return nil
 }
 
+func (s *jsiiProxy_S3Backend) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateS3Backend_IsBackendParameters(x interface{}) error {
 	return nil
 }

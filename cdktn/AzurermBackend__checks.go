@@ -49,6 +49,14 @@ func (a *jsiiProxy_AzurermBackend) validateOverrideLogicalIdParameters(newLogica
 	return nil
 }
 
+func (a *jsiiProxy_AzurermBackend) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	if feature == "" {
+		return fmt.Errorf("parameter feature is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateAzurermBackend_IsBackendParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")

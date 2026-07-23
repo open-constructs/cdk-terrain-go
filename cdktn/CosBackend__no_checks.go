@@ -19,6 +19,10 @@ func (c *jsiiProxy_CosBackend) validateOverrideLogicalIdParameters(newLogicalId 
 	return nil
 }
 
+func (c *jsiiProxy_CosBackend) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateCosBackend_IsBackendParameters(x interface{}) error {
 	return nil
 }

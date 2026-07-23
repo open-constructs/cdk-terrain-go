@@ -19,6 +19,10 @@ func (g *jsiiProxy_GcsBackend) validateOverrideLogicalIdParameters(newLogicalId 
 	return nil
 }
 
+func (g *jsiiProxy_GcsBackend) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateGcsBackend_IsBackendParameters(x interface{}) error {
 	return nil
 }

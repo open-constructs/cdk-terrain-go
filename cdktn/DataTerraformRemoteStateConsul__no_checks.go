@@ -35,6 +35,10 @@ func (d *jsiiProxy_DataTerraformRemoteStateConsul) validateOverrideLogicalIdPara
 	return nil
 }
 
+func (d *jsiiProxy_DataTerraformRemoteStateConsul) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateDataTerraformRemoteStateConsul_IsConstructParameters(x interface{}) error {
 	return nil
 }

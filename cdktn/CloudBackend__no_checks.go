@@ -19,6 +19,10 @@ func (c *jsiiProxy_CloudBackend) validateOverrideLogicalIdParameters(newLogicalI
 	return nil
 }
 
+func (c *jsiiProxy_CloudBackend) validateRegisterProviderFeatureUsageParameters(feature ProviderFeature) error {
+	return nil
+}
+
 func validateCloudBackend_IsBackendParameters(x interface{}) error {
 	return nil
 }
