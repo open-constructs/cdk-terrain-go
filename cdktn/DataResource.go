@@ -160,7 +160,7 @@ type DataResource interface {
 	MarkWriteOnlyAttribute(value interface{}) interface{}
 	// Move the resource corresponding to "id" to this resource.
 	//
-	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Note that the resource being moved from must be marked as moved using its instance function.
 	// Experimental.
 	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
