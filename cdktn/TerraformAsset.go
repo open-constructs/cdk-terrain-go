@@ -14,10 +14,14 @@ import (
 // Experimental.
 type TerraformAsset interface {
 	constructs.Construct
+	IAsset
+	// A hash of this asset, which is available at construction time.
+	//
+	// As this is a plain string, it
+	// can be used in construct IDs in order to enforce creation of a new resource when the content
+	// hash has changed.
 	// Experimental.
 	AssetHash() *string
-	// Experimental.
-	SetAssetHash(val *string)
 	// Name of the asset.
 	// Experimental.
 	FileName() *string
@@ -49,6 +53,7 @@ type TerraformAsset interface {
 // The jsii proxy struct for TerraformAsset
 type jsiiProxy_TerraformAsset struct {
 	internal.Type__constructsConstruct
+	jsiiProxy_IAsset
 }
 
 func (j *jsiiProxy_TerraformAsset) AssetHash() *string {
@@ -134,17 +139,6 @@ func NewTerraformAsset_Override(t TerraformAsset, scope constructs.Construct, id
 		"cdktn.TerraformAsset",
 		[]interface{}{scope, id, config},
 		t,
-	)
-}
-
-func (j *jsiiProxy_TerraformAsset)SetAssetHash(val *string) {
-	if err := j.validateSetAssetHashParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"assetHash",
-		val,
 	)
 }
 

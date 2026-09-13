@@ -11,10 +11,6 @@ func validateTerraformAsset_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_TerraformAsset) validateSetAssetHashParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_TerraformAsset) validateSetTypeParameters(val AssetType) error {
 	return nil
 }

@@ -171,6 +171,39 @@ func init() {
 			return &jsiiProxy_Aspects{}
 		},
 	)
+	_jsii_.RegisterClass(
+		"cdktn.AssetHash",
+		reflect.TypeOf((*AssetHash)(nil)).Elem(),
+		nil, // no members
+		func() interface{} {
+			return &jsiiProxy_AssetHash{}
+		},
+	)
+	_jsii_.RegisterStruct(
+		"cdktn.AssetHashOptions",
+		reflect.TypeOf((*AssetHashOptions)(nil)).Elem(),
+	)
+	_jsii_.RegisterEnum(
+		"cdktn.AssetHashType",
+		reflect.TypeOf((*AssetHashType)(nil)).Elem(),
+		map[string]interface{}{
+			"SOURCE": AssetHashType_SOURCE,
+			"OUTPUT": AssetHashType_OUTPUT,
+			"CUSTOM": AssetHashType_CUSTOM,
+		},
+	)
+	_jsii_.RegisterStruct(
+		"cdktn.AssetOptions",
+		reflect.TypeOf((*AssetOptions)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"cdktn.AssetPackaging",
+		reflect.TypeOf((*AssetPackaging)(nil)).Elem(),
+		nil, // no members
+		func() interface{} {
+			return &jsiiProxy_AssetPackaging{}
+		},
+	)
 	_jsii_.RegisterEnum(
 		"cdktn.AssetType",
 		reflect.TypeOf((*AssetType)(nil)).Elem(),
@@ -1065,6 +1098,20 @@ func init() {
 		"cdktn.EncodingOptions",
 		reflect.TypeOf((*EncodingOptions)(nil)).Elem(),
 	)
+	_jsii_.RegisterClass(
+		"cdktn.ExcludeIgnoreStrategy",
+		reflect.TypeOf((*ExcludeIgnoreStrategy)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "cacheKey", GoGetter: "CacheKey"},
+			_jsii_.MemberMethod{JsiiMethod: "ignores", GoMethod: "Ignores"},
+			_jsii_.MemberProperty{JsiiProperty: "pruneExcludedDirectories", GoGetter: "PruneExcludedDirectories"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ExcludeIgnoreStrategy{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IIgnoreStrategy)
+			return &j
+		},
+	)
 	_jsii_.RegisterStruct(
 		"cdktn.FileProvisioner",
 		reflect.TypeOf((*FileProvisioner)(nil)).Elem(),
@@ -1176,6 +1223,28 @@ func init() {
 		},
 	)
 	_jsii_.RegisterInterface(
+		"cdktn.IAsset",
+		reflect.TypeOf((*IAsset)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "assetHash", GoGetter: "AssetHash"},
+		},
+		func() interface{} {
+			return &jsiiProxy_IAsset{}
+		},
+	)
+	_jsii_.RegisterInterface(
+		"cdktn.IAssetPackaging",
+		reflect.TypeOf((*IAssetPackaging)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "extension", GoGetter: "Extension"},
+			_jsii_.MemberMethod{JsiiMethod: "pack", GoMethod: "Pack"},
+			_jsii_.MemberProperty{JsiiProperty: "producesDirectory", GoGetter: "ProducesDirectory"},
+		},
+		func() interface{} {
+			return &jsiiProxy_IAssetPackaging{}
+		},
+	)
+	_jsii_.RegisterInterface(
 		"cdktn.IFragmentConcatenator",
 		reflect.TypeOf((*IFragmentConcatenator)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -1183,6 +1252,18 @@ func init() {
 		},
 		func() interface{} {
 			return &jsiiProxy_IFragmentConcatenator{}
+		},
+	)
+	_jsii_.RegisterInterface(
+		"cdktn.IIgnoreStrategy",
+		reflect.TypeOf((*IIgnoreStrategy)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "cacheKey", GoGetter: "CacheKey"},
+			_jsii_.MemberMethod{JsiiMethod: "ignores", GoMethod: "Ignores"},
+			_jsii_.MemberProperty{JsiiProperty: "pruneExcludedDirectories", GoGetter: "PruneExcludedDirectories"},
+		},
+		func() interface{} {
+			return &jsiiProxy_IIgnoreStrategy{}
 		},
 	)
 	_jsii_.RegisterInterface(
@@ -1437,6 +1518,10 @@ func init() {
 		func() interface{} {
 			return &jsiiProxy_ITokenResolver{}
 		},
+	)
+	_jsii_.RegisterStruct(
+		"cdktn.IgnoreQuery",
+		reflect.TypeOf((*IgnoreQuery)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"cdktn.ImportableResource",
@@ -1827,6 +1912,10 @@ func init() {
 		"cdktn.OssBackendConfig",
 		reflect.TypeOf((*OssBackendConfig)(nil)).Elem(),
 	)
+	_jsii_.RegisterStruct(
+		"cdktn.PackOptions",
+		reflect.TypeOf((*PackOptions)(nil)).Elem(),
+	)
 	_jsii_.RegisterClass(
 		"cdktn.PgBackend",
 		reflect.TypeOf((*PgBackend)(nil)).Elem(),
@@ -2037,6 +2126,10 @@ func init() {
 		"cdktn.StackManifest",
 		reflect.TypeOf((*StackManifest)(nil)).Elem(),
 	)
+	_jsii_.RegisterStruct(
+		"cdktn.StagedAsset",
+		reflect.TypeOf((*StagedAsset)(nil)).Elem(),
+	)
 	_jsii_.RegisterClass(
 		"cdktn.StringConcat",
 		reflect.TypeOf((*StringConcat)(nil)).Elem(),
@@ -2215,6 +2308,7 @@ func init() {
 		func() interface{} {
 			j := jsiiProxy_TerraformAsset{}
 			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IAsset)
 			return &j
 		},
 	)
