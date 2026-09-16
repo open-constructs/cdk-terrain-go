@@ -22,6 +22,18 @@ type IAssetPackaging interface {
 	// Appended to the staged artifact name, e.g. ".zip", "", ".tar.bz2".
 	// Experimental.
 	Extension() *string
+	// Whether `pack` emits an artifact with no directory entries of its own — only the ignore-strategy-aware source walk.
+	//
+	// `hashPath`'s `archive` frame
+	// must agree with this or the hash and the artifact describe different
+	// file sets.
+	//
+	// `ZipPackaging` sets this because `archiveSync` never emits ZIP directory
+	// entries. A directory-producing packaging that mirrors the source tree
+	// (e.g. `DirectoryPackaging`) leaves this false, since its directories are
+	// real entries on disk.
+	// Experimental.
+	OmitsDirectoryEntries() *bool
 	// Whether the staged result is a directory rather than a single file.
 	//
 	// Publishers branch on this to decide whether they upload one object or
@@ -51,6 +63,16 @@ func (j *jsiiProxy_IAssetPackaging) Extension() *string {
 	_jsii_.Get(
 		j,
 		"extension",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IAssetPackaging) OmitsDirectoryEntries() *bool {
+	var returns *bool
+	_jsii_.Get(
+		j,
+		"omitsDirectoryEntries",
 		&returns,
 	)
 	return returns

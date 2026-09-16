@@ -204,6 +204,29 @@ func init() {
 			return &jsiiProxy_AssetPackaging{}
 		},
 	)
+	_jsii_.RegisterClass(
+		"cdktn.AssetStaging",
+		reflect.TypeOf((*AssetStaging)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "assetHash", GoGetter: "AssetHash"},
+			_jsii_.MemberProperty{JsiiProperty: "isDirectory", GoGetter: "IsDirectory"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "packaging", GoGetter: "Packaging"},
+			_jsii_.MemberMethod{JsiiMethod: "stage", GoMethod: "Stage"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AssetStaging{}
+			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IAsset)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"cdktn.AssetStagingOptions",
+		reflect.TypeOf((*AssetStagingOptions)(nil)).Elem(),
+	)
 	_jsii_.RegisterEnum(
 		"cdktn.AssetType",
 		reflect.TypeOf((*AssetType)(nil)).Elem(),
@@ -1237,6 +1260,7 @@ func init() {
 		reflect.TypeOf((*IAssetPackaging)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "extension", GoGetter: "Extension"},
+			_jsii_.MemberProperty{JsiiProperty: "omitsDirectoryEntries", GoGetter: "OmitsDirectoryEntries"},
 			_jsii_.MemberMethod{JsiiMethod: "pack", GoMethod: "Pack"},
 			_jsii_.MemberProperty{JsiiProperty: "producesDirectory", GoGetter: "ProducesDirectory"},
 		},
