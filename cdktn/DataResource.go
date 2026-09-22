@@ -16,7 +16,7 @@ import (
 //
 // The DataResource resource is useful for storing values which need to follow a manage resource lifecycle, and for triggering provisioners when there is no other logical managed resource in which to place them.
 //
-// It requires Terraform 1.4 or later.
+// It requires Terraform >=1.4.0 or OpenTofu >=1.6.0.
 //
 // It is also possible to generate these bindings by adding "terraform.io/builtin/terraform" to the "terraformProviders" key in your cdktf.json file and running "cdktn get".
 //
