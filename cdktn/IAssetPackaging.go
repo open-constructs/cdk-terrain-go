@@ -16,9 +16,17 @@ import (
 // core change.
 // Experimental.
 type IAssetPackaging interface {
-	// Perform the staging transformation, writing the packaged result to `options.target`.
+	// Write the packaged result to `options.target`.
 	// Experimental.
 	Pack(options *PackOptions)
+	// Whether `pack` accepts a directory as its `source`.
+	//
+	// Independent of `producesDirectory` and `omitsDirectoryEntries`, both of
+	// which describe the output: a `tar.gz` packaging takes a directory source
+	// yet emits a single file. Bundler output is always a directory, so a
+	// packaging that is `false` here cannot stage it.
+	// Experimental.
+	AcceptsDirectorySource() *bool
 	// Appended to the staged artifact name, e.g. ".zip", "", ".tar.bz2".
 	// Experimental.
 	Extension() *string
@@ -56,6 +64,16 @@ func (i *jsiiProxy_IAssetPackaging) Pack(options *PackOptions) {
 		"pack",
 		[]interface{}{options},
 	)
+}
+
+func (j *jsiiProxy_IAssetPackaging) AcceptsDirectorySource() *bool {
+	var returns *bool
+	_jsii_.Get(
+		j,
+		"acceptsDirectorySource",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_IAssetPackaging) Extension() *string {

@@ -393,6 +393,22 @@ func init() {
 			return &j
 		},
 	)
+	_jsii_.RegisterStruct(
+		"cdktn.BundleOptions",
+		reflect.TypeOf((*BundleOptions)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"cdktn.BundlerKey",
+		reflect.TypeOf((*BundlerKey)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "add", GoMethod: "Add"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "withEnv", GoMethod: "WithEnv"},
+		},
+		func() interface{} {
+			return &jsiiProxy_BundlerKey{}
+		},
+	)
 	_jsii_.RegisterClass(
 		"cdktn.CloudBackend",
 		reflect.TypeOf((*CloudBackend)(nil)).Elem(),
@@ -1256,9 +1272,21 @@ func init() {
 		},
 	)
 	_jsii_.RegisterInterface(
+		"cdktn.IAssetBundler",
+		reflect.TypeOf((*IAssetBundler)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bundle", GoMethod: "Bundle"},
+			_jsii_.MemberProperty{JsiiProperty: "bundlerKey", GoGetter: "BundlerKey"},
+		},
+		func() interface{} {
+			return &jsiiProxy_IAssetBundler{}
+		},
+	)
+	_jsii_.RegisterInterface(
 		"cdktn.IAssetPackaging",
 		reflect.TypeOf((*IAssetPackaging)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "acceptsDirectorySource", GoGetter: "AcceptsDirectorySource"},
 			_jsii_.MemberProperty{JsiiProperty: "extension", GoGetter: "Extension"},
 			_jsii_.MemberProperty{JsiiProperty: "omitsDirectoryEntries", GoGetter: "OmitsDirectoryEntries"},
 			_jsii_.MemberMethod{JsiiMethod: "pack", GoMethod: "Pack"},

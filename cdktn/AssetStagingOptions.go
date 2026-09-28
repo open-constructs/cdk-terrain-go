@@ -45,6 +45,21 @@ type AssetStagingOptions struct {
 	// against `cdktf.json` is the caller's responsibility.
 	// Experimental.
 	SourcePath *string `field:"required" json:"sourcePath" yaml:"sourcePath"`
+	// A bundler that builds the source into an artifact before staging.
+	//
+	// Under the default `SOURCE` hashing the build is deferred to `stage()` and
+	// stays skippable; `OUTPUT` hashing builds eagerly at construction time to
+	// hash the artifact, forgoing skippability. A bundler always produces a
+	// directory, so single-file packaging (`AssetType.FILE`) is rejected.
+	// Default: - the source is staged verbatim, with no build step.
+	//
+	// Experimental.
+	Bundler IAssetBundler `field:"optional" json:"bundler" yaml:"bundler"`
+	// Identifier used in error messages, so they name the user-facing construct (e.g. the `TerraformAsset`) rather than this internal staging child.
+	// Default: - the staging construct's own id.
+	//
+	// Experimental.
+	DisplayName *string `field:"optional" json:"displayName" yaml:"displayName"`
 	// Paths to exclude, relative to `sourcePath`.
 	//
 	// Cannot be combined with

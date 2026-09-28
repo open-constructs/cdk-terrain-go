@@ -11,23 +11,14 @@ import (
 	"github.com/open-constructs/cdk-terrain-go/cdktn/internal"
 )
 
-// Resolves an asset's identity (`SOURCE`/`OUTPUT`/`CUSTOM` hashing, with `exclude`/`extraHash`) and stages it to disk.
+// Resolves an asset's identity and stages its content to disk.
 //
-// Hashing happens eagerly in the constructor; staging the content to
-// `targetPath` only happens when `stage()` is called, which callers do from
-// their own `onSynthesize` hook. This keeps the filesystem side effect in the
-// one window where it is safe to run, and keeps this class skippable once a
-// bundler is introduced.
-//
-// `SOURCE` and `OUTPUT` compute identically here: without a bundler, the
-// "output" of an asset is its source verbatim. A future bundler changes what
-// `OUTPUT` hashes, not this class.
-//
-// The source-tree walk behind `SOURCE`/`OUTPUT` is cached per synth (see
-// {@link hashCachesByRoot}), so referencing the same asset from more than one
-// resource or stack hashes it once. `ASSET_HASH_SALT_CONTEXT_KEY` folds an
-// app-wide value into every computed hash, for bulk cache-busting across an
-// entire tree rather than one asset's `extraHash`.
+// The hash is available immediately after construction; the filesystem write
+// is deferred to `stage()`, the one window where it is safe. Hashing is
+// cached per synth (see {@link hashCachesByRoot}) so an asset referenced from
+// several places is walked once. Without a bundler, `SOURCE` and `OUTPUT` both
+// hash the source; with one they diverge, as `AssetStagingOptions.bundler`
+// describes.
 // Experimental.
 type AssetStaging interface {
 	constructs.Construct
@@ -46,10 +37,11 @@ type AssetStaging interface {
 	Node() constructs.Node
 	// Experimental.
 	Packaging() IAssetPackaging
-	// Write the staged content to `targetPath`.
+	// Stage the asset's content to `targetPath`.
 	//
-	// Called from the owning
-	// construct's `onSynthesize` hook, once the target path is known.
+	// Called from the owning construct's `onSynthesize` hook. Without a bundler
+	// the source is packaged verbatim; with one, the bundler's output is, built
+	// eagerly for `OUTPUT` hashing or deferred to here for `SOURCE`.
 	// Experimental.
 	Stage(targetPath *string)
 	// Returns a string representation of this construct.
