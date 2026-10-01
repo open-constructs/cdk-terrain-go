@@ -12,11 +12,9 @@ package cdktn
 // apply time and belongs on the publisher's own reference type instead.
 // Experimental.
 type StagedAsset struct {
-	// A hash on the content source.
+	// A hash on the content source, uniquely identifying this asset.
 	//
-	// This hash is used to uniquely identify this
-	// asset throughout the system. If this value doesn't change, the asset will
-	// not be rebuilt or republished.
+	// The asset is not rebuilt or republished while this value is unchanged.
 	// Experimental.
 	AssetHash *string `field:"required" json:"assetHash" yaml:"assetHash"`
 	// Whether the staged artifact is a directory rather than a single file.

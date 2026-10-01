@@ -14,7 +14,7 @@ type BundleOptions struct {
 	// A scratch directory the bundler may write into, owned and created by the caller.
 	//
 	// The bundler produces its output here (or in a subdirectory) and
-	// returns the directory that holds the finished artifact — see
+	// returns a {@link BundleResult} pointing at the finished artifact — see
 	// {@link IAssetBundler.bundle}.
 	// Experimental.
 	OutputDir *string `field:"required" json:"outputDir" yaml:"outputDir"`

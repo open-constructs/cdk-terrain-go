@@ -27,8 +27,8 @@ type TerraformAssetConfig struct {
 	// Core ships no bundler; implement `IAssetBundler` or use one from a bundler
 	// package. Under the default `SOURCE` hashing the build is deferred to synth
 	// and stays skippable; `OUTPUT` hashing builds eagerly to hash the artifact.
-	// `AssetType.FILE` is rejected, since bundler output is always a directory.
-	// See `AssetStagingOptions.bundler`.
+	// The bundler's output shape must match `type`. See
+	// `AssetStagingOptions.bundler`.
 	// Default: - the source is staged verbatim, with no build step.
 	//
 	// Experimental.

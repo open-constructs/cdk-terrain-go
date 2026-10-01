@@ -397,6 +397,26 @@ func init() {
 		"cdktn.BundleOptions",
 		reflect.TypeOf((*BundleOptions)(nil)).Elem(),
 	)
+	_jsii_.RegisterEnum(
+		"cdktn.BundleOutputType",
+		reflect.TypeOf((*BundleOutputType)(nil)).Elem(),
+		map[string]interface{}{
+			"DIRECTORY": BundleOutputType_DIRECTORY,
+			"FILE": BundleOutputType_FILE,
+		},
+	)
+	_jsii_.RegisterClass(
+		"cdktn.BundleResult",
+		reflect.TypeOf((*BundleResult)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "isDeclined", GoGetter: "IsDeclined"},
+			_jsii_.MemberProperty{JsiiProperty: "outputType", GoGetter: "OutputType"},
+			_jsii_.MemberProperty{JsiiProperty: "path", GoGetter: "Path"},
+		},
+		func() interface{} {
+			return &jsiiProxy_BundleResult{}
+		},
+	)
 	_jsii_.RegisterClass(
 		"cdktn.BundlerKey",
 		reflect.TypeOf((*BundlerKey)(nil)).Elem(),
@@ -407,6 +427,20 @@ func init() {
 		},
 		func() interface{} {
 			return &jsiiProxy_BundlerKey{}
+		},
+	)
+	_jsii_.RegisterClass(
+		"cdktn.ChainBundler",
+		reflect.TypeOf((*ChainBundler)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "bundle", GoMethod: "Bundle"},
+			_jsii_.MemberProperty{JsiiProperty: "bundlerKey", GoGetter: "BundlerKey"},
+			_jsii_.MemberProperty{JsiiProperty: "outputFileName", GoGetter: "OutputFileName"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ChainBundler{}
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IAssetBundler)
+			return &j
 		},
 	)
 	_jsii_.RegisterClass(
@@ -1277,6 +1311,7 @@ func init() {
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "bundle", GoMethod: "Bundle"},
 			_jsii_.MemberProperty{JsiiProperty: "bundlerKey", GoGetter: "BundlerKey"},
+			_jsii_.MemberProperty{JsiiProperty: "outputFileName", GoGetter: "OutputFileName"},
 		},
 		func() interface{} {
 			return &jsiiProxy_IAssetBundler{}

@@ -13,9 +13,8 @@ import (
 // A `bundlerKey` has to serialize everything that can move a build's output;
 // done ad hoc, every bundler invents its own delimiter and forgets an input
 // differently. This gives the convention one implementation: parts are joined
-// with a separator that is escaped where it appears in a value, so distinct
-// inputs can never collide into the same key (`["a:b", "c"]` and
-// `["a", "b:c"]` stay different).
+// with a separator that is escaped inside values, so distinct inputs cannot
+// collide into the same key.
 //
 // Example:
 //   const key = BundlerKey.of("docker", image, command)

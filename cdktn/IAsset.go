@@ -10,11 +10,10 @@ import (
 // Common interface for all assets.
 // Experimental.
 type IAsset interface {
-	// A hash of this asset, which is available at construction time.
+	// A hash of this asset, available at construction time.
 	//
-	// As this is a plain string, it
-	// can be used in construct IDs in order to enforce creation of a new resource when the content
-	// hash has changed.
+	// Being a plain string, it can be used in construct IDs to force a new
+	// resource when the content hash changes.
 	// Experimental.
 	AssetHash() *string
 }

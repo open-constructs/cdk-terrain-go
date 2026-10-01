@@ -14,11 +14,9 @@ type AssetStagingOptions struct {
 	// hash, and because it names the staged asset file it may only contain
 	// letters, digits, `_`, `.` and `-`.
 	//
-	// NOTE: the hash is used in order to identify a specific revision of the asset, and
-	// used for optimizing and caching deployment activities related to this asset such as
-	// packaging, uploading to cloud storage, etc. If you chose to customize the hash, you will
-	// need to make sure it is updated every time the asset changes, or otherwise it is
-	// possible that some deployments will not be invalidated.
+	// The hash identifies a specific revision of the asset and caches deployment
+	// work (packaging, uploading). A custom hash must be updated whenever the
+	// asset changes, or some deployments will not be invalidated.
 	// Default: - based on `assetHashType`.
 	//
 	// Experimental.
@@ -49,8 +47,10 @@ type AssetStagingOptions struct {
 	//
 	// Under the default `SOURCE` hashing the build is deferred to `stage()` and
 	// stays skippable; `OUTPUT` hashing builds eagerly at construction time to
-	// hash the artifact, forgoing skippability. A bundler always produces a
-	// directory, so single-file packaging (`AssetType.FILE`) is rejected.
+	// hash the artifact, forgoing skippability. The bundler's declared output
+	// shape must match the packaging: a `BundleResult.directory` needs a
+	// directory-accepting packaging, a `BundleResult.file` a single-file one
+	// (`AssetType.FILE`). The mismatch is caught once the build runs.
 	// Default: - the source is staged verbatim, with no build step.
 	//
 	// Experimental.

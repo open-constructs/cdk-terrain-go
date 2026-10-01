@@ -4,7 +4,7 @@
 package cdktn
 
 
-// Asset hash options.
+// Options controlling how an asset's hash is derived.
 // Experimental.
 type AssetOptions struct {
 	// Specify a custom hash for this asset.
@@ -14,11 +14,9 @@ type AssetOptions struct {
 	// hash, and because it names the staged asset file it may only contain
 	// letters, digits, `_`, `.` and `-`.
 	//
-	// NOTE: the hash is used in order to identify a specific revision of the asset, and
-	// used for optimizing and caching deployment activities related to this asset such as
-	// packaging, uploading to cloud storage, etc. If you chose to customize the hash, you will
-	// need to make sure it is updated every time the asset changes, or otherwise it is
-	// possible that some deployments will not be invalidated.
+	// The hash identifies a specific revision of the asset and caches deployment
+	// work (packaging, uploading). A custom hash must be updated whenever the
+	// asset changes, or some deployments will not be invalidated.
 	// Default: - based on `assetHashType`.
 	//
 	// Experimental.
