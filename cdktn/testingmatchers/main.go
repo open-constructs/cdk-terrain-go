@@ -25,4 +25,8 @@ func init() {
 		"cdktn.testingMatchers.TerraformConstructor",
 		reflect.TypeOf((*TerraformConstructor)(nil)).Elem(),
 	)
+	_jsii_.RegisterStruct(
+		"cdktn.testingMatchers.ToPlanSuccessfullyOptions",
+		reflect.TypeOf((*ToPlanSuccessfullyOptions)(nil)).Elem(),
+	)
 }
