@@ -37,7 +37,9 @@ type TerraformAssetConfig struct {
 	//
 	// See
 	// `AssetStagingOptions.exclude` for the accepted forms. Both the computed
-	// hash and the staged/packed content honor the exclusion.
+	// hash and the staged/packed content honor the exclusion. Cannot be
+	// combined with `ignoreStrategy`, which replaces this matcher rather than
+	// layering on top of it.
 	// Default: - nothing is excluded.
 	//
 	// Experimental.
@@ -47,6 +49,16 @@ type TerraformAssetConfig struct {
 	//
 	// Experimental.
 	ExtraHash *string `field:"optional" json:"extraHash" yaml:"extraHash"`
+	// Exclusion matching, for callers that need `.gitignore` / `.dockerignore` parity (including `!`-negation) rather than the built-in exact-path / suffix / directory matcher. See `AssetStagingOptions.ignoreStrategy`.
+	//
+	// `!`-negation only takes effect if the strategy also sets
+	// `pruneExcludedDirectories: false`; otherwise an excluded directory is
+	// pruned before its contents are ever checked against a re-include
+	// pattern. See `IIgnoreStrategy.pruneExcludedDirectories`.
+	// Default: - `exclude` is used with the built-in matcher.
+	//
+	// Experimental.
+	IgnoreStrategy IIgnoreStrategy `field:"optional" json:"ignoreStrategy" yaml:"ignoreStrategy"`
 	// Experimental.
 	Type AssetType `field:"optional" json:"type" yaml:"type"`
 }
