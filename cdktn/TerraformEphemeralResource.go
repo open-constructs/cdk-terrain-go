@@ -10,6 +10,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// A Terraform ephemeral resource (`ephemeral` block): a value the provider produces during a run, such as a temporary credential, that is never persisted to plan or state.
 // Experimental.
 type TerraformEphemeralResource interface {
 	TerraformElement

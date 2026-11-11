@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Reference to a Terraform `map(map(bool))` attribute, with each inner map read by key as a BooleanMap.
 // Experimental.
 type BooleanMapMap interface {
 	IResolvable

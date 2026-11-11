@@ -8,6 +8,9 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Base class for a reference to a Terraform map attribute.
+//
+// Generated provider bindings extend it for maps of nested objects and maps of lists of nested objects.
 // Experimental.
 type ComplexMap interface {
 	IResolvable

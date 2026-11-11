@@ -10,6 +10,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// A Terraform managed resource (`resource` block): an infrastructure object whose lifecycle Terraform manages through a provider and tracks in state.
 // Experimental.
 type TerraformResource interface {
 	TerraformElement

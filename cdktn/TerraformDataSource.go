@@ -10,6 +10,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// A Terraform data source (`data` block): reads information from a provider about infrastructure defined outside this configuration, for use elsewhere in the stack.
 // Experimental.
 type TerraformDataSource interface {
 	TerraformElement

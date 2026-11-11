@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Reference to a Terraform `map(any)` attribute, with each value read by key as an any-typed token.
 // Experimental.
 type AnyMap interface {
 	IResolvable

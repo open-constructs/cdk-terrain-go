@@ -8,6 +8,9 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Base class for a reference to a Terraform list or set attribute, converting sets with `tolist()` for index access.
+//
+// Generated provider bindings extend it for lists and sets of nested blocks.
 // Experimental.
 type ComplexList interface {
 	IResolvable

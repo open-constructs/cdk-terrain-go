@@ -10,6 +10,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// Base class for `terraform_remote_state` data sources, which read the outputs of another Terraform state.
 // Experimental.
 type TerraformRemoteState interface {
 	TerraformElement

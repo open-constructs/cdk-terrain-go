@@ -10,6 +10,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// A `terraform_remote_state` data source that reads the outputs of a state stored in the `oss` backend.
 // Experimental.
 type DataTerraformRemoteStateOss interface {
 	TerraformRemoteState

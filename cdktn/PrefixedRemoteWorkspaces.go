@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Selects every `remote` backend workspace whose name starts with the given prefix.
 // Experimental.
 type PrefixedRemoteWorkspaces interface {
 	IRemoteWorkspace

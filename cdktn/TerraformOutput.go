@@ -10,6 +10,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// A Terraform output value (`output` block): exposes a value from the stack after apply, for display or for use by other stacks and tools.
 // Experimental.
 type TerraformOutput interface {
 	TerraformElement

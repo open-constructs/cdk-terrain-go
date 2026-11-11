@@ -8,6 +8,10 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Iterator over the instances of a resource or data source that itself uses `for_each`.
+//
+// The element must not use
+// `count`.
 // Experimental.
 type ResourceTerraformIterator interface {
 	TerraformIterator

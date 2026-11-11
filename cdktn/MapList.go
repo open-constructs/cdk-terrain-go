@@ -8,6 +8,9 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Base class for a reference to a Terraform list or set of maps, converting sets with `tolist()` for index access.
+//
+// Generated provider bindings extend it for lists of maps and lists of lists of nested objects.
 // Experimental.
 type MapList interface {
 	IInterpolatingParent

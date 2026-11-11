@@ -10,6 +10,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// A Terraform local value (entry in a `locals` block): a named expression that can be referenced from elsewhere in the stack.
 // Experimental.
 type TerraformLocal interface {
 	TerraformElement

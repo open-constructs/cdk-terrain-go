@@ -10,6 +10,9 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// Base class for a Terraform provider configuration (`provider` block), which configures the plugin that manages a set of resource and data source types.
+//
+// Also declares the provider in `required_providers`.
 // Experimental.
 type TerraformProvider interface {
 	TerraformElement

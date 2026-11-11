@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Reference to a Terraform `list(map(number))` attribute, with each map read by index as a NumberMap.
 // Experimental.
 type NumberMapList interface {
 	MapList

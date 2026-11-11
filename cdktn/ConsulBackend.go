@@ -10,6 +10,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// Configures the stack to store its Terraform state in the `consul` backend.
 // Experimental.
 type ConsulBackend interface {
 	TerraformBackend

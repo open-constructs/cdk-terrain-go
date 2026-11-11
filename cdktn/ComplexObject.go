@@ -8,6 +8,9 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Reference to a single Terraform object attribute, optionally addressed by index within a list or set.
+//
+// Generated provider bindings extend it for the output reference of each nested block.
 // Experimental.
 type ComplexObject interface {
 	IInterpolatingParent

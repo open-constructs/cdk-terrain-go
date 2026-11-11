@@ -10,6 +10,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// A Terraform module (`module` block) used without generated bindings: input variables are set by name and outputs are read by name.
 // Experimental.
 type TerraformHclModule interface {
 	TerraformModule

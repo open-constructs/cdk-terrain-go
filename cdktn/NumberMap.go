@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Reference to a Terraform `map(number)` attribute, with each value read by key as a number token.
 // Experimental.
 type NumberMap interface {
 	IResolvable

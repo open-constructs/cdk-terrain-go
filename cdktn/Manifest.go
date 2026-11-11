@@ -8,6 +8,9 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Describes the synthesized output of an app: the stacks, their output paths, annotations and dependencies.
+//
+// Written to manifest.json in the output directory.
 // Experimental.
 type Manifest interface {
 	IManifest

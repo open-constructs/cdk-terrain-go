@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Type constraint keywords and constructors for the `type` argument of a TerraformVariable.
 // Experimental.
 type VariableType interface {
 }

@@ -8,6 +8,9 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Iterator over a map;
+//
+// `key` is the current entry's key and `value` its value.
 // Experimental.
 type MapTerraformIterator interface {
 	TerraformIterator

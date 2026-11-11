@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Reference to a Terraform `list(map(bool))` attribute, with each map read by index as a BooleanMap.
 // Experimental.
 type BooleanMapList interface {
 	MapList

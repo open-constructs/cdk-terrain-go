@@ -8,6 +8,10 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Base class for iterators over a list, map or resource collection.
+//
+// Used as a `for_each` meta-argument, as the source
+// of a dynamic block, or in for-expressions; `key` and `value` refer to the current element.
 // Experimental.
 type TerraformIterator interface {
 	ITerraformIterator

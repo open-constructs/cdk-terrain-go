@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Reference to a Terraform `map(list(number))` attribute, with each list read by key as a number list.
 // Experimental.
 type NumberListMap interface {
 	ComplexMap

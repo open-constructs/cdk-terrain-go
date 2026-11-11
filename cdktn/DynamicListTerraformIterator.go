@@ -8,6 +8,10 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Iterator over a list of complex objects.
+//
+// For `for_each` the list is converted to a map keyed by the value of the
+// given attribute of each element, so every entry is uniquely keyed.
 // Experimental.
 type DynamicListTerraformIterator interface {
 	MapTerraformIterator

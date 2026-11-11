@@ -11,6 +11,9 @@ import (
 	"github.com/open-constructs/cdk-terrain-go/cdktn/internal"
 )
 
+// A unit of deployment that synthesizes to its own Terraform configuration and working directory, with its own backend and state.
+//
+// Resources, providers and other Terraform elements are defined within a stack.
 // Experimental.
 type TerraformStack interface {
 	constructs.Construct

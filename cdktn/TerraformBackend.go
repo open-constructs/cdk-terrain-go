@@ -10,6 +10,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// Base class for backends, which synthesize the `terraform.backend` block that sets where a stack stores its state.
 // Experimental.
 type TerraformBackend interface {
 	TerraformElement

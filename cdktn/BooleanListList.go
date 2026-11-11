@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Reference to a Terraform `list(list(bool))` attribute, with each inner list read by index as a resolvable token.
 // Experimental.
 type BooleanListList interface {
 	ComplexList

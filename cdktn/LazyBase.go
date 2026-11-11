@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Base class for lazy tokens whose value is produced at resolution time and then passed through any registered post-processors.
 // Experimental.
 type LazyBase interface {
 	IResolvable

@@ -10,6 +10,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// A Terraform input variable (`variable` block): a parameter whose value is supplied when the stack is planned or applied, letting the configuration be customised without changing its code.
 // Experimental.
 type TerraformVariable interface {
 	TerraformElement

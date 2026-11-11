@@ -11,6 +11,9 @@ import (
 	"github.com/open-constructs/cdk-terrain-go/cdktn/internal"
 )
 
+// Base class for constructs that synthesize to a Terraform configuration block, such as resources, data sources, providers, variables and outputs.
+//
+// Provides logical IDs, references and raw overrides.
 // Experimental.
 type TerraformElement interface {
 	constructs.Construct

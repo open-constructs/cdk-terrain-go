@@ -10,6 +10,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 )
 
+// Configures the stack to store its Terraform state in the `s3` backend.
 // Experimental.
 type S3Backend interface {
 	TerraformBackend

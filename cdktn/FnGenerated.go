@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Bindings for the Terraform and OpenTofu built-in functions, generated from the function availability matrix.
 // Experimental.
 type FnGenerated interface {
 }

@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Reference to a Terraform `map(string)` attribute, with each value read by key as a string token.
 // Experimental.
 type StringMap interface {
 	IResolvable

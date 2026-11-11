@@ -8,6 +8,7 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Selects a single `remote` backend workspace by its full name.
 // Experimental.
 type NamedRemoteWorkspace interface {
 	IRemoteWorkspace

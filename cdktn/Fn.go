@@ -8,6 +8,10 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Terraform and OpenTofu built-in functions, callable from CDK code;
+//
+// each call produces a token that renders as the
+// corresponding function call in the synthesized configuration.
 // Experimental.
 type Fn interface {
 	FnGenerated

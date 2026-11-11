@@ -8,6 +8,10 @@ import (
 	_init_ "github.com/open-constructs/cdk-terrain-go/cdktn/jsii"
 )
 
+// Iterator over a list or set.
+//
+// The list is converted to a set for `for_each`, so `key` and `value` are both the
+// current element.
 // Experimental.
 type ListTerraformIterator interface {
 	TerraformIterator
