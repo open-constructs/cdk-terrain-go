@@ -29,7 +29,12 @@ type BundlerKey interface {
 	// Render the collected parts to the string passed as `bundlerKey`.
 	// Experimental.
 	ToString() *string
-	// Append `key=value` parts for a record, sorted by key so the result does not depend on property order.
+	// Append `env=key=value` parts for a record, sorted by key so the result does not depend on property order.
+	//
+	// The `env=` prefix keeps these parts in their own namespace, so they
+	// cannot collide with an unrelated `key=value` part passed to {@link add}.
+	// The key and value are escaped so an `=` inside either cannot be mistaken
+	// for the key/value separator.
 	// Experimental.
 	WithEnv(entries *map[string]*string) BundlerKey
 }
