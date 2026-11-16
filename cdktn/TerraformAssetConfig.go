@@ -52,9 +52,9 @@ type TerraformAssetConfig struct {
 	//
 	// A bundled asset reuses the artifact an earlier synth staged for the same
 	// hash, so set this for build inputs the hash cannot see: files outside
-	// `path`, a mutable Docker tag such as `node:20`, or which bundler is used
-	// and its options when it has no `bundlerKey`. It is ignored when
-	// `assetHash` is set; change `assetHash` instead.
+	// `path` or excluded from it, a mutable Docker tag such as `node:20`, or
+	// which bundler is used and its options when it has no `bundlerKey`. It is
+	// ignored when `assetHash` is set; change `assetHash` instead.
 	// Default: - no extra hash.
 	//
 	// Experimental.

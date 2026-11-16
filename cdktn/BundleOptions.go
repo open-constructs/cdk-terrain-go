@@ -25,5 +25,16 @@ type BundleOptions struct {
 	// the bundler reads exactly the file set the asset hash was taken over.
 	// Experimental.
 	Source *string `field:"required" json:"source" yaml:"source"`
+	// Absolute path to the asset's source as given, before exclusions.
+	//
+	// Differs from `source` only for a directory source with `exclude` or
+	// `ignoreStrategy` set. Read inputs from `source`; use this to resolve what
+	// lies around the source (node_modules, lockfiles, symlink targets). Files
+	// read here that `source` lacks are not in a `SOURCE` hash: cover them with
+	// `bundlerKey`/`extraHash`, or use `AssetHashType.OUTPUT`.
+	// Default: - same as `source`.
+	//
+	// Experimental.
+	OriginalSource *string `field:"optional" json:"originalSource" yaml:"originalSource"`
 }
 
