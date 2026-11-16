@@ -26,5 +26,14 @@ type PackOptions struct {
 	//
 	// Experimental.
 	IgnoreStrategy IIgnoreStrategy `field:"optional" json:"ignoreStrategy" yaml:"ignoreStrategy"`
+	// Reject a symlink whose target resolves outside `source` and is not itself absolute, rather than packaging a link that dangles once the artifact is extracted elsewhere.
+	//
+	// Only `ZipPackaging` acts on this — a
+	// verbatim directory copy stays on the same machine, so such a link can
+	// still be followed there even though it is not portable.
+	// Default: false.
+	//
+	// Experimental.
+	RejectEscapingSymlinks *bool `field:"optional" json:"rejectEscapingSymlinks" yaml:"rejectEscapingSymlinks"`
 }
 
