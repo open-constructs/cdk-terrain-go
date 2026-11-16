@@ -29,6 +29,10 @@ type TerraformAssetConfig struct {
 	// and stays skippable; `OUTPUT` hashing builds eagerly to hash the artifact.
 	// The bundler's output shape must match `type`. See
 	// `AssetStagingOptions.bundler`.
+	//
+	// Under `SOURCE` hashing or a fixed `assetHash`, a synth keeps the artifact
+	// already staged for the same hash and `type`. See `extraHash` for inputs
+	// the hash cannot see; deleting the output directory also forces a rebuild.
 	// Default: - the source is staged verbatim, with no build step.
 	//
 	// Experimental.
@@ -45,6 +49,12 @@ type TerraformAssetConfig struct {
 	// Experimental.
 	Exclude *[]*string `field:"optional" json:"exclude" yaml:"exclude"`
 	// Extra information to fold into the hash (e.g. build instructions and other inputs).
+	//
+	// A bundled asset reuses the artifact an earlier synth staged for the same
+	// hash, so set this for build inputs the hash cannot see: files outside
+	// `path`, a mutable Docker tag such as `node:20`, or which bundler is used
+	// and its options when it has no `bundlerKey`. It is ignored when
+	// `assetHash` is set; change `assetHash` instead.
 	// Default: - no extra hash.
 	//
 	// Experimental.
