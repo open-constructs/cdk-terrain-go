@@ -26,6 +26,8 @@ type TerraformVariable interface {
 	// Experimental.
 	Description() *string
 	// Experimental.
+	Ephemeral() *bool
+	// Experimental.
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
@@ -151,6 +153,16 @@ func (j *jsiiProxy_TerraformVariable) Description() *string {
 	_jsii_.Get(
 		j,
 		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TerraformVariable) Ephemeral() *bool {
+	var returns *bool
+	_jsii_.Get(
+		j,
+		"ephemeral",
 		&returns,
 	)
 	return returns

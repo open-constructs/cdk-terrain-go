@@ -10,6 +10,9 @@ type TerraformVariableConfig struct {
 	Default interface{} `field:"optional" json:"default" yaml:"default"`
 	// Experimental.
 	Description *string `field:"optional" json:"description" yaml:"description"`
+	// The ephemeral argument in a variable block keeps the value of the variable out of the plan and state files.
+	// Experimental.
+	Ephemeral *bool `field:"optional" json:"ephemeral" yaml:"ephemeral"`
 	// Experimental.
 	Nullable *bool `field:"optional" json:"nullable" yaml:"nullable"`
 	// Experimental.
